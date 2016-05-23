@@ -1,0 +1,17 @@
+	SET EXACT ON
+	CLOSE DATA
+
+	SELE 0
+
+	use p:\bd\nferibge  ALIAS MUNI EXCL
+	SET ORDER TO TAG nota
+
+
+	SELE 0
+	use  x:\scgc\central\nota  ALIAS CLIE 
+	set relation to STR(EMPRESA,3)+STR(NOTA,7) into MUNI
+
+
+
+	REPLACE ALL CLIE.MUNI_IBGE WITH MUNI.MUNI_IBGE FOR !EMPTY(MUNI.MUNI_IBGE)
+

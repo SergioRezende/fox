@@ -1,0 +1,74 @@
+
+
+
+  set dele off
+
+
+*   =recupera()
+   
+   =APAGA()
+
+
+
+RETURN    
+
+function recupera
+
+
+    SELE 0 
+	USE o:\scgc2013\central\nota
+	SET ORDER TO TAG nota
+
+
+
+
+
+    SELE 0 
+
+   use x:\scgc\anp2013\itcomiss
+   SET ORDER TO TAG MOVIMENTO
+
+
+   
+
+
+   do while !eof()
+   
+     if deleted() 
+     
+        sele nota
+        seek  STR(itcomiss.EMPRESA,3)+STR(itcomiss.NOTA,7)      
+        IF FOUND() AND !deleted() 
+          IF  nota.status <> 2
+             SELE ITCOMISS
+              RECALL 
+          ENDIF
+   		ENDIF
+     ENDIF
+     SELE ITCOMISS
+     
+     skip
+   enddo
+   
+return
+
+FUNCTION APAGA
+
+   CLOSE DATA
+
+   SELE 0 
+
+   use x:\scgc\anp2013\itcomiss
+   SET ORDER TO TAG MOVIMENTO
+   
+   
+   QBR = STR(EMPRESA,3)+STR(VENDEDOR,4)+DTOS(DATA)+CODIGO+HORA+TIPO+STR(NOTA,7)+STR(ORDEM,2)+STR(MOTIVO,1)
+   DO WHILE !EOF()
+      SKIP
+      IF QBR = STR(EMPRESA,3)+STR(VENDEDOR,4)+DTOS(DATA)+CODIGO+HORA+TIPO+STR(NOTA,7)+STR(ORDEM,2)+STR(MOTIVO,1)
+         DELETE
+      ELSE
+         QBR = STR(EMPRESA,3)+STR(VENDEDOR,4)+DTOS(DATA)+CODIGO+HORA+TIPO+STR(NOTA,7)+STR(ORDEM,2)+STR(MOTIVO,1)
+      ENDIF
+   ENDDO
+RETURN   

@@ -1,0 +1,185 @@
+
+RETURN
+FUNCTION ULversaida     && VERIFICA O INTERESSE DE SAIDA
+		*---------------------------------------------------------*
+		* Verifica se Houve Solicita‡Æo de Saida <END>
+		*---------------------------------------------------------*
+		ON KEY LABEL END    && DESABILITA TECLA END  DO ULVerSaida 
+		*---------------------------------------------------------*
+		PRIVATE LNavista,LNaprazo,LNsomret,LNsomipi
+		PRIVATE LSopcao
+		PRIVATE LNdscServUsado
+		STORE 0 TO LNavista,LNaprazo,LNsomret,LNsomipi
+		STORE 0 TO LNdscServUsado
+		CLEAR TYPEAHEAD
+		*---------------------------------------------------------*
+		*     Caso o Operador Digite Parte do Codigo e Tecle <END>
+		*   o Sistema Recupera o Codigo Anterior
+		*---------------------------------------------------------*
+	   	LSopcao = foxalert2('Confirma edicao e grava itens ?') 
+
+
+		LNemp  = orcament.empresa
+		LNorca = orcament.orcamento
+
+
+
+
+		IF ORCAMENT.natu_oper = 4 ;
+		    OR ;
+		    orcament.TIPO $ "ETE/ETI" 
+
+		  wp_msg = ""
+
+		  DO CASE
+
+			 CASE  EMPTY(orcament.FNLDAD_NFE) 
+  				wp_msg = ;
+   				 "Preecher FINALIDADE Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFEMITENTE) 
+  				wp_msg = ;
+   				 "Preecher EMITENTE Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFOPERACAO) 
+  				wp_msg = ;
+   				 "Preecher OPERACAO Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFDOCUMENT) 
+  				wp_msg = ;
+   				 "Preecher DOCUMENTO Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFSERIE) 
+  				wp_msg = ;
+   				 "Preecher SERIE Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFMOD_DOC) 
+  				wp_msg = ;
+   				 "Preecher MODELO Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE EMPTY(orcament.RFDT_DOC) 
+  				wp_msg = ;
+   				 "Preecher DT.DOC Doc. de Referencia Opcao-F3. <ENTER>"
+
+             CASE orcament.RFDT_DOC < (date() - 365) ;
+  				wp_msg = ;
+   				 "DT.DOC Doc. de Referencia MUITO ANTIGA Opcao-F3. <ENTER>"
+
+
+             CASE ( len(alltrim(orcament.RFCHVACESS)) < 44 ;
+                       and orcament.RFMOD_DOC = "55")
+  				wp_msg = ;
+   				 "Preecher CHAVE ACESSO com 44 caracteres-Opcao-F3. <ENTER>"
+
+
+		  ENDCASE
+		  IF !EMPTY(WP_MSG)
+				=UPbeeps(.F.,wp_msg)
+				CLEAR TYPEAHEAD
+				*-------------------------------------------------------*
+				*KEYBOARD "{BACKTAB}"
+				*-------------------------------------------------------*
+				RETURN(.F.) 
+		  ENDIF			
+		ENDIF
+
+		IF ORCAMENT.natu_oper = 4 ;
+		    OR ;
+		    orcament.TIPO $ "ETE/ETI" 
+
+          IF ;
+             orcament.FNLDAD_NFE <> "4"
+   				wp_msg = ;
+   				  "Ajuste a finalidade para 4 em Dados Doc. "+;
+   				   "de Referencia Opcao-F3. <ENTER>"
+				=UPbeeps(.F.,wp_msg)
+				CLEAR TYPEAHEAD
+				*-------------------------------------------------------*
+				*KEYBOARD "{BACKTAB}"
+				*-------------------------------------------------------*
+				RETURN(.F.) 
+		   	ENDIF
+
+
+        ENDIF
+
+
+	   	IF LSopcao = "S"
+			=ULsomgeral(LNavista,LNaprazo,LNsomret,LNsomipi,LNdscServUsado)
+			IF orcament.vlr_ent > LNaprazo ;
+				AND orcament.natu_oper = 1 && VENDAS
+				
+   				wp_msg = "Entrada Superior ao Valor Compra. <ENTER>"
+				=UPbeeps(.F.,wp_msg)
+				CLEAR TYPEAHEAD
+				*-------------------------------------------------------*
+				*KEYBOARD "{BACKTAB}"
+				*-------------------------------------------------------*
+				RETURN(.F.) 
+		   	ENDIF
+
+	        IF  ULcritcSaida() && NAO FECHA QDO PELO VENDE
+
+                =ULexecSaida()
+
+*     NELSON IDENTIFICOU Q QAUNDO CANCELA ITEM E SAI EM SEQUANCIA O SYSTEM
+*       NAO DA ERRO
+                
+*				SELE clienc
+*				SET ORDER TO TAG emporca
+*				SEEK STR(LNemp,3)+STR(LNorca,6)
+*				SELE tmpitem
+*				IF !FOUND("clienc")	OR EMPTY(ALLTRIM(clienc.nome))
+*					=ULClieDados(LNemp,LNorca)
+*		  	 		RETURN(.T.) 
+*		  		ENDIF
+*		  		IF	orcament.tp_transp = 0
+*					=ULOrcaDados(LNemp,LNorca)
+*		  	 		RETURN(.T.) 
+*		  		ENDIF
+*
+*				LStipoSaida =  "GRAVAR"
+*				DEACTIVATE WINDOWS ITENS 
+*				CLEAR TYPEAHEAD
+*				ON KEY LABEL ESCAPE
+*				KEYBOARD CHR(27)
+*	  			******
+*				isediting = .F.   && INIBIE A EDICAO DOS CAMPO OBJ_PRSO
+*				******
+*				KEYBOARD CHR(27)
+*
+*
+
+		  		RETURN(.T.) 
+   	   		ELSE
+				*-------------------------------------------------------*
+				CLEAR TYPEAHEAD
+				*KEYBOARD "{BACKTAB}"
+				*-------------------------------------------------------*
+		  		RETURN(.F.) 
+	   		ENDIF	   	  	 
+	   	ELSE	
+	   		IF LSopcao = "N"   && abandonar
+				LStipoSaida =  "ABORTAR"
+				DEACTIVATE WINDOWS ITENS 
+				CLEAR TYPEAHEAD
+				ON KEY LABEL ESCAPE
+				KEYBOARD CHR(27)
+	  			******
+				isediting = .F.   && INIBIE A EDICAO DOS CAMPO OBJ_PRSO
+				******
+				CLEAR TYPEAHEAD
+				*-------------------------------------------------------*
+				KEYBOARD CHR(27)
+				*-------------------------------------------------------*
+			    RETURN(.F.)
+	   		ENDIF
+		ENDIF					
+		CLEAR TYPEAHEAD
+		=INKEY(0.001)
+		*-------------------------------------------------------*
+		*KEYBOARD "{BACKTAB}"
+		*-------------------------------------------------------*
+RETURN(.F.)
+
+pm

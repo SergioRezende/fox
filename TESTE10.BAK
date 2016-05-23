@@ -1,0 +1,35 @@
+*------------------------------------------*
+*==> Seleciona todas a copias de Cupons
+*------------------------------------------*
+
+SELECT NF.* ;
+	FROM TMPSel_1 NF;
+	WHERE nf.orcamento <> nf.referencia ;
+	INTO CURSOR TdsCopias
+
+
+
+
+*------------------------------------------*
+*==> Seleciona todos cupons sem copias
+*------------------------------------------*
+
+SELECT nf.*  ;
+	FROM TMPSel_1 NF;
+	WHERE ;
+		STR(NF.EMPRESA,3)+STR(nf.nota,7) ;
+		NOT IN ;
+		(SELECT ;
+		    STR(NF.EMPRESA,3)+;
+		    STR(NF.REFERENCIA,7) as chave ;
+		 from TdsCopias);
+	INTO CURSOR TdsCupons
+	
+	
+*------------------------------------------*
+*==> Uniao dos registros
+*------------------------------------------*
+SELECT * FROM TdsCopias;
+	UNION;
+SELECT * FROM TdsCupons;
+	INTO CURSOR TdsDFis

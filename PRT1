@@ -1,0 +1,91 @@
+
+Structure for database: X:\FPD26\PROG\EMPRESA.DBF
+Number of data records:      10
+Date of last update   : 03/09/06
+Code Page             : 0
+Field  Field Name  Type       Width    Dec    Index  Collate
+    1  EMPRESA     Numeric        3            Asc   Machine
+    2  NOME        Character     40            Asc   Machine
+    3  CGC         Numeric       14            Asc   Machine
+    4  INSCRICAO   Character     18                  
+    5  MATRIZ      Numeric        3                  
+    6  REGIAO      Numeric        2            Asc   Machine
+    7  ENDERECO    Character     40                  
+    8  BAIRRO      Character     30                  
+    9  CIDADE      Character     30                  
+   10  PAIS        Character     15                  
+   11  ESTADO      Character      2                  
+   12  CEP         Character      8                  
+   13  FONE        Character     14                  
+   14  ATIVIDADE   Character     50                  
+   15  CONTATO     Character     40                  
+   16  CARGO       Character     20                  
+   17  ORCAMENTO   Numeric        6                  
+   18  TRANSF      Numeric        6                  
+   19  REMESSA     Numeric        6                  
+   20  DEVOLUCAO   Numeric        6                  
+   21  BOLETIM     Numeric        6                  
+   22  NOTA        Numeric        6                  
+   23  FLAGIMPNF   Numeric        1                  
+   24  TP_ECF      Character      2                  
+   25  ULT_CUPOM   Numeric        7                  
+   26  FLAGIMPCPM  Numeric        1                  
+   27  INCR_CUPOM  Numeric        2                  
+   28  ULT_NFSRVC  Numeric        6                  
+   29  FLAGIMPSRV  Numeric        1                  
+   30  DOC_COBR    Numeric        6                  
+   31  PEDIDO      Numeric        6                  
+   32  JUROMES     Numeric        6      3           
+   33  MULTA       Numeric        6      3           
+   34  MORA        Numeric        6      3           
+   35  BONUS       Numeric        5      2           
+   36  PREM_PONT   Numeric        5      2           
+   37  MES_OPERAC  Date           8                  
+   38  TAB_CST     Numeric        2                  
+   39  EMPTAB      Numeric        3                  
+   40  INSC_MUNIC  Character     15                  
+   41  INSC_AC     Character     18                  
+   42  INSC_AL     Character     18                  
+   43  INSC_AP     Character     18                  
+   44  INSC_AM     Character     18                  
+   45  INSC_BA     Character     18                  
+   46  INSC_CE     Character     18                  
+   47  INSC_DF     Character     18                  
+   48  INSC_ES     Character     18                  
+   49  INSC_GO     Character     18                  
+   50  INSC_MA     Character     18                  
+   51  INSC_MT     Character     18                  
+   52  INSC_MS     Character     18                  
+   53  INSC_MG     Character     18                  
+   54  INSC_PA     Character     18                  
+   55  INSC_PB     Character     18                  
+   56  INSC_PR     Character     18                  
+   57  INSC_PE     Character     18                  
+   58  INSC_PI     Character     18                  
+   59  INSC_RJ     Character     18                  
+   60  INSC_RN     Character     18                  
+   61  INSC_RS     Character     18                  
+   62  INSC_RO     Character     18                  
+   63  INSC_RA     Character     18                  
+   64  INSC_SC     Character     18                  
+   65  INSC_SP     Character     18                  
+   66  INSC_SE     Character     18                  
+   67  INSC_TO     Character     18                  
+   68  ALIQ_ISS    Numeric        5      2           
+   69  REDUZ_BASE  Numeric        5      2           
+   70  SIGLA       Character      5                  
+   71  ULTLIB_RES  Character      8                  
+   72  DT_ATUALIZ  Date           8                  
+   73  CONTRBSTQR  Character      1                  
+   74  TIPO_ECF    Character     10                  
+   75  ECF_SERIE   Character     15                  
+   76  TX_BONUS    Numeric        5      2           
+   77  NFMSG_FIXA  Character     60                  
+   78  AIDF        Numeric        7                  
+   79  ANOAIDF     Numeric        4                  
+   80  MODISS      Numeric        1                  
+   81  DTREGIS     Date           8                  
+   82  HREGIS      Character      8                  
+   83  USRREGIS    Numeric        4                  
+   84  DELETADO    Logical        1                  
+** Total **                    1095

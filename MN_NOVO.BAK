@@ -1,0 +1,342 @@
+
+
+*-------------------------------------------------------------------*
+*  OBJETIVO :
+*			DAR MANUTENCAO NAS TABELAS PERMITIDO QUE FIQUE APENAS OS 
+*           REGISTROS RELATIVOS AO ANO INFORMADO
+*
+*	   
+*
+*-------------------------------------------------------------------*
+
+on error
+SET EXCL ON
+SET DELE ON
+SET DATE GERMAN
+SET CENT ON
+SET ESCAPE ON
+SET TALK ON
+
+************   <<<<  FUNDAMENTAL >>>>>  *******************
+MANTER_ANO = DATE() - 90
+
+
+DIRETORIO = "Q:\SCGC\LOJA\                "  && DIRETORIO PARA MANUTENCAO
+
+
+CONFIRMA      ="N"
+
+clear
+
+@ 10,10 SAY "Diretorio"
+@ 11,16 get DIRETORIO
+
+@ 13,10 SAY "Manter dados apos a data de"
+@ 14,16 get MANTER_ANO
+
+
+
+@ 20,10 SAY "CONFIRMA (S) ou (N)"
+@ 21,16 get CONFIRMA
+
+read
+
+DIRETORIO = ALLTRIM(DIRETORIO)
+
+IF CONFIRMA <> "S" 
+    WAIT WINDOW " PROCESSAMENTO NAO CONFIRMADO"
+	RETURN
+ENDIF
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE NOTAS DE SAIDA
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"NOTA.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE NF_ANEXO
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"NF_ANEXO.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE NOTAS DE ENTRADA
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"NOTAENT.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ITENS NOTAS DE ENTRADA
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"NOTAITE.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ITEMMOV
+*   obs: as reservas sao mantidas independente da data
+*-------------------------------------------------------------*
+*
+*ORIG_arq     = DIRETORIO+"ITEMMOV.DBF"
+*
+*USE &ORIG_arq
+*DELETE ALL  FOR DATA < MANTER_ANO AND OPERACAO <> "RVPS"
+*PACK 
+*REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ITMANEXO
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"ITMANEXO.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE SALDOS
+*-------------------------------------------------------------*
+*
+*ORIG_arq     = DIRETORIO+"SALDO.DBF"
+*
+*USE &ORIG_arq
+*DELETE ALL  FOR DTABERT < MANTER_ANO
+*PACK 
+*REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ORCAMENT
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"ORCAMENT.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DT_FAT < MANTER_ANO AND LEFT(SITUACAO,1) $ "ZYO"
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ORC_ANEX
+*-------------------------------------------------------------*
+
+CLOSE  DATABASE
+ORIG_ORCA    = DIRETORIO+"ORCAMENT.DBF"
+ORIG_arq     = DIRETORIO+"ORC_ANEX.DBF"
+
+SELE 1
+USE &ORIG_ORCA ALIAS ORCA
+SET ORDER TO TAG GERAL
+
+SELE 2
+USE &ORIG_arq
+SET RELATION TO STR(EMPRESA,3)+STR(ORCAMENTO,6) INTO ORCA
+
+
+DELETE ALL  FOR EMPTY(ORCA.ORCAMENTO)
+PACK
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ORCATMP
+*-------------------------------------------------------------*
+
+CLOSE  DATABASE
+ORIG_ORCA    = DIRETORIO+"ORCAMENT.DBF"
+ORIG_arq     = DIRETORIO+"ORCATMP.DBF"
+
+SELE 1
+USE &ORIG_ORCA ALIAS ORCA
+SET ORDER TO TAG GERAL
+
+SELE 2
+USE &ORIG_arq
+SET RELATION TO STR(EMPRESA,3)+STR(ORCAMENTO,6) INTO ORCA
+
+
+DELETE ALL  FOR EMPTY(ORCA.ORCAMENTO)
+PACK
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ORCA_PGT
+*-------------------------------------------------------------*
+CLOSE  DATABASE
+ORIG_ORCA    = DIRETORIO+"ORCAMENT.DBF"
+ORIG_arq     = DIRETORIO+"ORCA_PGT.DBF"
+
+SELE 1
+USE &ORIG_ORCA ALIAS ORCA
+SET ORDER TO TAG GERAL
+
+SELE 2
+USE &ORIG_arq
+SET RELATION TO STR(EMPRESA,3)+STR(ORCAMENTO,6) INTO ORCA
+
+
+DELETE ALL  FOR EMPTY(ORCA.ORCAMENTO)
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE CBCOMISS
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"CBCOMISS.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE ITCOMISS
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"ITCOMISS.DBF"
+
+USE &ORIG_arq
+
+USE &ORIG_arq
+DELETE ALL  FOR DATA < MANTER_ANO
+PACK 
+REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE DUPLICAT
+*-------------------------------------------------------------*
+
+
+ORIG_arq     = DIRETORIO+"DUPLICAT.DBF"
+
+USE &ORIG_arq
+
+USE &ORIG_arq
+DELETE ALL  FOR     YEAR(DT_EMI) < YEAR(MANTER_ANO) ;
+                AND  (!EMPTY(DT_BAIXA) AND YEAR(DT_BAIXA) < YEAR(MANTER_ANO) - 3)
+
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE RETORNBC (SEGUE REGRA APLICADA A DUPLICATA)
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"RETORNBC.DBF"
+
+USE &ORIG_arq
+
+USE &ORIG_arq
+DELETE ALL  FOR     YEAR(DTAVISO) < YEAR(MANTER_ANO) ;
+                AND  (YEAR(DTAVISO) <= YEAR(MANTER_ANO) - 3)
+
+PACK 
+REINDEX
+
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE RETORNMV (SEGUE REGRA APLICADA A DUPLICATA)
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"RETORNMV.DBF"
+
+USE &ORIG_arq
+
+USE &ORIG_arq
+DELETE ALL  FOR     YEAR(DTAVISO) < YEAR(MANTER_ANO) ;
+                AND  (YEAR(DTAVISO) <= YEAR(MANTER_ANO) - 3)
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE PRVITSTQ
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"PRVITSTQ.DBF"
+
+USE &ORIG_arq
+
+ZAP
+PACK
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE QE
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"QE.DBF"
+
+USE &ORIG_arq
+
+ZAP
+PACK
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE PRECO
+*-------------------------------------------------------------*
+
+CLOSE  DATABASE
+ORIG_TAB    = "Q:\SCGC\COMUM\CADTAB.DBF"
+ORIG_arq     = DIRETORIO+"PRECO.DBF"
+
+SELE 1
+USE &ORIG_TAB ALIAS TAB
+SET ORDER TO TAG TABELA
+
+SELE 2
+USE &ORIG_arq
+SET RELATION TO STR(TABPRECO,3)+SERIE INTO TAB
+
+DELETE ALL  FOR YEAR(TAB.DTFIM) < YEAR(MANTER_ANO)
+                    
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE PEDIDO
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"PEDIDO.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR YEAR(DATA) < YEAR(MANTER_ANO)
+PACK 
+REINDEX
+
+*-------------------------------------------------------------*
+* MANUTENCAO DE PEDITE
+*-------------------------------------------------------------*
+
+ORIG_arq     = DIRETORIO+"PEDITE.DBF"
+
+USE &ORIG_arq
+DELETE ALL  FOR  YEAR(DATA) < YEAR(MANTER_ANO)
+PACK 
+REINDEX

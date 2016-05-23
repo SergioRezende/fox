@@ -1,0 +1,27 @@
+close data
+
+set dele on
+set date german
+
+use q:\scgc\loja\clientes  excl
+copy stru to q:\scgc\loja\rec_clie with cdx
+
+sele 0
+use  q:\scgc\loja\rec_clie excl
+ctr = 0
+
+sele clientes
+do while !eof()
+	scatter memvar
+	sele  rec_clie
+	append blank
+	gather memvar
+	
+    sele clientes
+    skip
+    ctr = ctr + 1
+ 
+   
+    wait window str(ctr,7) nowait
+enddo
+

@@ -1,0 +1,91 @@
+
+Structure for database: X:\PROJETOS\FOX\M\FOX\DOCFISCA.DBF
+Number of data records:       0
+Date of last update   : 04/29/09
+Code Page             : 0
+Field  Field Name  Type       Width    Dec    Index  Collate
+    1  EMPRESA     Numeric        3                  
+    2  TIPO        Character      3                  
+    3  MOD_DOC     Character      2                  
+    4  COD_IDFORN  Numeric        6                  
+    5  NRO_DOC     Numeric        7                  
+    6  SERIE_DOC   Character      3                  
+    7  NAT_OPER    Character     40                  
+    8  IND_OPER    Character      1                  
+    9  TP_MOV      Character      7                  
+   10  IND_EMITEN  Character      1                  
+   11  COD_SIT     Character      2                  
+   12  MOD_NOTA    Character      2                  
+   13  CHV_NFE     Character     44                  
+   14  DGT_CHVNFE  Character      1                  
+   15  DT_DOC      Date           8                  
+   16  DT_ENTSAI   Date           8                  
+   17  DT_CANC     Date           8                  
+   18  VLR_DOC     Numeric       18      4           
+   19  TP_PG       Character      1                  
+   20  TP_PGDESCR  Character     15                  
+   21  VLR_DESCON  Numeric       18      4           
+   22  VLRABAT_NT  Numeric       18      4           
+   23  VLR_MERCAD  Numeric       18      4           
+   24  IND_FRETE   Character      1                  
+   25  VLR_FRETE   Numeric       18      4           
+   26  VLR_SEGURO  Numeric       18      4           
+   27  VLR_DESPES  Numeric       18      4           
+   28  OUTDSPACES  Numeric       18      4           
+   29  BC_ICMS     Numeric       18      4           
+   30  VLR_ICMS    Numeric       18      4           
+   31  BC_ICMSRTD  Numeric       18      4           
+   32  VLRICMSRTD  Numeric       18      4           
+   33  BC_IPI      Numeric       18      4           
+   34  VLR_IPI     Numeric       18      4           
+   35  VLR_PIS     Numeric       18      4           
+   36  VLR_COFINS  Numeric       18      4           
+   37  VLR_PISRTD  Numeric       18      4           
+   38  VLR_COFRTD  Numeric       18      4           
+   39  INF_COMPLE  Character    120                  
+   40  NROPROCCON  Character     20                  
+   41  ORGPROCCON  Character      1                  
+   42  TPDOCIMPO   Character      1                  
+   43  NRODOCIMPO  Character     10                  
+   44  VLRPISIMPO  Numeric       18      4           
+   45  VLRCOFIMPO  Numeric       18      4           
+   46  VLRSRVCONT  Numeric       18      4           
+   47  VLRBCISSQN  Numeric       18      4           
+   48  VLR_ISSQN   Numeric       18      4           
+   49  VLR_BCIRRF  Numeric       18      4           
+   50  VLR_IRRF    Numeric       18      4           
+   51  VLR_BCPREV  Numeric       18      4           
+   52  VLR_PREV    Numeric       18      4           
+   53  AUTSEFAZCM  Character     10                  
+   54  NROPASSEFI  Character     10                  
+   55  TEMPERATUR  Numeric        6      1           
+   56  CPFCNPJ     Character     20                  
+   57  UF          Character      2                  
+   58  IE          Character     20                  
+   59  NOME        Character    100                  
+   60  RAZAOSOC    Character    100                  
+   61  TP_LOGRAD   Character     20                  
+   62  LOGRADOURO  Character     60                  
+   63  NRO_LOGRAD  Character      7                  
+   64  COMPL_LOGR  Character     25                  
+   65  CEP         Character      8                  
+   66  ZONA        Character     15                  
+   67  MUNI_IBGE   Character     10                  
+   68  MUNI_NOME   Character     60                  
+   69  BAIRRO      Character     60                  
+   70  PAIS        Character     30                  
+   71  DDD         Character      3                  
+   72  FONE        Character     15                  
+   73  IE_SUBTRIB  Character     20                  
+   74  SUFRAMA     Character      9                  
+   75  REF_NRODOC  Character     10                  
+   76  REF_SERIE   Character      3                  
+   77  REF_DT_DOC  Date           8                  
+   78  REF_INDOPE  Character      1                  
+   79  REF_TP_MOV  Character      7                  
+   80  REF_INDEMI  Character      1                  
+   81  REF_MODDOC  Character      2                  
+   82  NRO_SERECF  Character     25                  
+   83  NRO_CX_ECF  Character      5                  
+   84  NRO_CPMECF  Character     10                  
+** Total **                    1484

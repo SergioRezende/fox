@@ -1,0 +1,280 @@
+<?xml version="1.0" standalone="yes"?>                                                                                                                                                                                                                        
+    <DATAPACKET Version="2.0">                                                                                                                                                                                                                                
+      <METADATA>                                                                                                                                                                                                                                              
+        <FIELDS>                                                                                                                                                                                                                                              
+            <FIELD attrname="UNEM_CNPJ"             fieldtype="string" WIDTH="14" />                                                                                                                                                                          
+            <FIELD attrname="DFIS_MOD_DOCUMENTO"    fieldtype="string" WIDTH="2"/>                                                                                                                                                                            
+            <FIELD attrname="DFIS_IND_OPERACAO"     fieldtype="string" WIDTH="1"/>                                                                                                                                                                            
+            <FIELD attrname="DFIS_TP_MOVIMENTO"     fieldtype="string" WIDTH="7"/>                                                                                                                                                                            
+            <FIELD attrname="DFIS_NRO_DOCUMENTO"    fieldtype="string" WIDTH="10"/>                                                                                                                                                                           
+            <FIELD attrname="DFIS_SERIE"            fieldtype="string" WIDTH="3"/>                                                                                                                                                                            
+            <FIELD attrname="DFIS_MOD_NOTA"         fieldtype="string" WIDTH="2"/>                                                                                                                                                                            
+            <FIELD attrname="DFIS_CPF"          fieldtype="string" WIDTH="20"/>                                                                                                                                                                               
+            <FIELD attrname="DFIS_IE"               fieldtype="string" WIDTH="20"/>                                                                                                                                                                           
+            <FIELD attrname="ITDF_NRO_ITEM"         fieldtype="string" WIDTH="5"/>                                                                                                                                                                            
+            <FIELD attrname="ITDF_PROD_CODIGO"      fieldtype="string" WIDTH="10"/>                                                                                                                                                                           
+            <FIELD attrname="ITDF_PROD_DESCRICAO"   fieldtype="string" WIDTH="60"/>                                                                                                                                                                           
+            <FIELD attrname="ITDF_PROD_DESCR_COMPL" fieldtype="string" WIDTH="60"/>                                                                                                                                                                           
+            <FIELD attrname="ITDF_UNIDADE"          fieldtype="string" WIDTH="3"/>                                                                                                                                                                            
+            <FIELD attrname="ITDF_PRECO_TABELA"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_PRECO_MAX_TABELADO"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_PRECO_MIN_TABELADO"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_QTDE"                fieldtype="string" WIDTH="20"/>                                                                                                                                                                        
+            <FIELD attrname="ITDF_VLR_DESCONTO"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_VLR_DESP_FINANCEIRA"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_OUTRAS_DESP_ACES"  fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_FRETE"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_SEGURO"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_FINAL"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_MENSAGEM"              fieldtype="string" WIDTH="250"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_IND_MOVIMENTO_ESTQ"    fieldtype="string" WIDTH="3"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_LOTE_QTDE_ITENS"       fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_LOTE_NRO"              fieldtype="string" WIDTH="10"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_LOTE_FABRICACAO"       fieldtype="string" WIDTH="10"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_LOTE_VALIDADE"         fieldtype="string" WIDTH="10"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CUSTO_MEDIO_ATUAL"     fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_SALDO_ANTERIOR"        fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CUSTO_MEDIO_ANT"       fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CUSTO_NA_OPERACAO"     fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_A_TRIBUTAR"        fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_SALDO_ATUAL"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CUSTO_CONTABIL"        fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CFOP"                   fieldtype="string" WIDTH="5"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CST_ICMS"              fieldtype="string" WIDTH="3"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_CST_IPI"               fieldtype="string" WIDTH="2"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_CST_ISS"               fieldtype="string" WIDTH="2"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_CST_PIS"               fieldtype="string" WIDTH="2"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_CST_COFINS"            fieldtype="string" WIDTH="2"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_CST_IR"                fieldtype="string" WIDTH="2"/>                                                                                                                                                                       
+            <FIELD attrname="ITDF_VLR_BC_BRUTA_ICMS"     fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_IND_REDUCAO"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_BC_ICMS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_ALIQ_ICMS_ORIGEM"      fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_ALIQ_ICMS_DESTINO"     fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_DIF_ALIQUOTA"          fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_ALIQ_ICMS"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_ICMS"              fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_REG_FISCAL_TRIB_ORIGEM"   fieldtype="string" WIDTH="23"/>                                                                                                                                                                   
+            <FIELD attrname="ITDF_REG_FISCAL_TRIB_DESTINO"  fieldtype="string" WIDTH="23"/>                                                                                                                                                                   
+            <FIELD attrname="ITDF_VLR_BC_ISENTA_ICMS"    fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_BC_OUTR_ICMS"      fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_BC_BRUTA_ICMS_RTD"      fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_IVA"                   fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_BC_ICMS_RTD"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_ALIQ_ICMS_RTD"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_ICMS_RTD"              fieldtype="string" WIDTH="20"/>                                                                                                                                                                  
+            <FIELD attrname="ITDF_VLR_BC_BRUTA_RTD_ENTRADA"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_VLR_BC_RTD_ENTRADA"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_VLR_ICMS_RTD_ENTRADA"       fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_IND_APURACAO_IPI"       fieldtype="string" WIDTH="9"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_VLR_BC_IPI"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_IPI"               fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_IPI"                fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_ISS"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_ISS"               fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_ISS"                fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_ISS_RTD"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_ISS_RTD"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_ISS_RTD"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_PIS"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_PIS"               fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_QTDE_BC_PIS"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_PIS"                fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_PIS_RTD"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_COFINS"          fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_COFINS"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_QTDE_BC_COFINS"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_COFINS"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_COFINS_RTD"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_IR"              fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_IR"                fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_IR"                 fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_IR_RTD"             fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_CSLL"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ALIQ_CSLL"              fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_CSLL"               fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_ADIANTAMENTO_CSLL"      fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_LANC_AUTOMATICO"        fieldtype="string" WIDTH="3"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CLAS_CONS_SERV_TELECOM" fieldtype="string" WIDTH="3"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CLAS_CONS_GAS"          fieldtype="string" WIDTH="2"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CLAS_CONS_AGUA"         fieldtype="string" WIDTH="2"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_CLAS_CONS_ENERGIA_ELETR"  fieldtype="string" WIDTH="4"/>                                                                                                                                                                    
+            <FIELD attrname="ITDF_ALIQ_ICMS_SO"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_IND_MOD_BC_ICMS"        fieldtype="string" WIDTH="1"/>                                                                                                                                                                      
+            <FIELD attrname="ITDF_PERCENTUAL_ACRESCIMO"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_PERCENTUAL_DESCONTO"    fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_PRECO_VENDA_UNITARIO"            fieldtype="string" WIDTH="20"/>                                                                                                                                                            
+            <FIELD attrname="ITDF_VLR_ABATE_NT"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_ACRESCIMO"          fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_BRUTA_ICMS_SO"   fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_ICMS_SO"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_BC_ISENTA_IPI"      fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_COFINS_IMPORTACAO"  fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_DESPESAS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_ICMS_SO"            fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_PIS_IMPORTACAO"     fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_PRODUTOS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_SERVICOS_NT"        fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_SERVICOS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_VLR_TRIBUTOS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                                     
+            <FIELD attrname="ITDF_ORIGEM_MERCADORIA"           fieldtype="string" WIDTH="1"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_O_ITEM_E_SERVICO"           fieldtype="string" WIDTH="1"/>                                                                                                                                                                  
+            <FIELD attrname="ITDF_VLR_PRODUTOS_SERVICOS"           fieldtype="string" WIDTH="20"/>                                                                                                                                                            
+            <FIELD attrname="ITDF_GTIM"           fieldtype="string" WIDTH="14"/>                                                                                                                                                                             
+            <FIELD attrname="ITDF_NCM"           fieldtype="string" WIDTH="8"/>                                                                                                                                                                               
+            <FIELD attrname="ITDF_EX_TIPI"           fieldtype="string" WIDTH="8"/>                                                                                                                                                                           
+            <FIELD attrname="ITDF_GENERO"           fieldtype="string" WIDTH="2"/>                                                                                                                                                                            
+            <FIELD attrname="ITDF_GTIM_UNIDADE_TRIBUTAVEL"           fieldtype="string" WIDTH="14"/>                                                                                                                                                          
+            <FIELD attrname="ITDF_UNIDADE_TRIBUTAVEL"           fieldtype="string" WIDTH="6"/>                                                                                                                                                                
+            <FIELD attrname="ITDF_VLR_UNIDADE_TRIBUTAVEL"           fieldtype="string" WIDTH="20"/>                                                                                                                                                           
+            <FIELD attrname="ITDF_QTDE_UNIDADE_TRIBUTAVEL"           fieldtype="string" WIDTH="20"/>                                                                                                                                                          
+            <FIELD attrname="ITDF_CLS_CODIGO_LISTA_SERVICO"           fieldtype="string" WIDTH="4"/>                                                                                                                                                          
+            <FIELD attrname="ITDF_IND_MOD_BC_ICMS_RTD"        fieldtype="string" WIDTH="1"/>                                                                                                                                                                  
+            <FIELD attrname="ITDF_QTDE_BC_COFINS_RTD"         fieldtype="string" WIDTH="20"/>                                                                                                                                                                 
+            <FIELD attrname="ITDF_VLR_ALIQ_COFINS_RTD"            fieldtype="string" WIDTH="20"/>                                                                                                                                                             
+            <FIELD attrname="DFIS_CNPJ"          fieldtype="string" WIDTH="20"/>                                                                                                                                                                              
+            <FIELD attrname="ITDF_IND_MED_BC_ICMS"          fieldtype="string" WIDTH="1"/>                                                                                                                                                                    
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+ </FIELDS>                                                                                                                                                                                                                                                    
+        </METADATA>                                                                                                                                                                                                                                           
+        <ROWDATA>                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+<ROW UNEM_CNPJ="01536085000190"
+DFIS_MOD_DOCUMENTO="01"
+DFIS_IND_OPERACAO="1"
+DFIS_TP_MOVIMENTO="SAIDA  "
+DFIS_NRO_DOCUMENTO=" 270971"
+DFIS_CPF="           "
+DFIS_IE="100380050           "
+DFIS_SERIE="0"
+ITDF_NRO_ITEM="    1"
+ITDF_PROD_CODIGO="22051341  "
+ITDF_PROD_DESCRICAO="PNEU 11.00R22 16LS R297 BR                                                                          "
+ITDF_PROD_DESCR_COMPL="PNEU 11.00R22 16LS R297 BR                                  "
+ITDF_UNIDADE="PC "
+ITDF_PRECO_TABELA="      1005,9300"
+ITDF_PRECO_MAX_TABELADO="         0,0000"
+ITDF_PRECO_MIN_TABELADO="         0,0000"
+ITDF_QTDE="         4,0000"
+ITDF_VLR_DESCONTO="         0,0000"
+ITDF_VLR_DESP_FINANCEIRA="         0,0000"
+ITDF_VLR_OUTRAS_DESP_ACES="         0,0000"
+ITDF_VLR_FRETE="         0,0000"
+ITDF_VLR_SEGURO="         0,0000"
+ITDF_VLR_FINAL="      4023,7200"
+ITDF_MENSAGEM="     "
+ITDF_IND_MOVIMENTO_ESTQ="SIM"
+ITDF_LOTE_QTDE_ITENS="         0,0000"
+ITDF_LOTE_NRO="          "
+ITDF_LOTE_FABRICACAO="  /  /    "
+ITDF_LOTE_VALIDADE="  /  /    "
+ITDF_CUSTO_MEDIO_ATUAL="      1005,9292"
+ITDF_SALDO_ANTERIOR="        93,0000"
+ITDF_CUSTO_MEDIO_ANT="         0,0000"
+ITDF_CUSTO_NA_OPERACAO="         0,0000"
+ITDF_VLR_A_TRIBUTAR="      4023,7200"
+ITDF_SALDO_ATUAL="        89,0000"
+ITDF_CUSTO_CONTABIL="         0,0000"
+ITDF_CFOP="5409 "
+ITDF_CST_ICMS="040"
+ITDF_CST_IPI="53"
+ITDF_CST_ISS="07"
+ITDF_CST_PIS="07"
+ITDF_CST_COFINS="04"
+ITDF_CST_IR="07"
+ITDF_VLR_BC_BRUTA_ICMS="         0,0000"
+ITDF_IND_REDUCAO="         0,0000"
+ITDF_VLR_BC_ICMS="         0,0000"
+ITDF_ALIQ_ICMS_ORIGEM="        12,0000"
+ITDF_ALIQ_ICMS_DESTINO="        17,0000"
+ITDF_DIF_ALIQUOTA="         5,0000"
+ITDF_ALIQ_ICMS="         0,0000"
+ITDF_VLR_ICMS="         0,0000"
+ITDF_REG_FISCAL_TRIB_ORIGEM="SUBSTITUICAO TRIBUTARIA"
+ITDF_REG_FISCAL_TRIB_DESTINO="SUBSTITUICAO TRIBUTARIA"
+ITDF_VLR_BC_ISENTA_ICMS="      4023,7200"
+ITDF_VLR_BC_OUTR_ICMS="         0,0000"
+ITDF_VLR_BC_BRUTA_ICMS_RTD="         0,0000"
+ITDF_IVA="         1,3200"
+ITDF_VLR_BC_ICMS_RTD="         0,0000"
+ITDF_ALIQ_ICMS_RTD="         5,0000"
+ITDF_VLR_ICMS_RTD="         0,0000"
+ITDF_VLR_BC_BRUTA_RTD_ENTRADA="         0,0000"
+ITDF_VLR_BC_RTD_ENTRADA="         0,0000"
+ITDF_VLR_ICMS_RTD_ENTRADA="         0,0000"
+ITDF_IND_APURACAO_IPI="1"
+ITDF_VLR_BC_IPI="         0,0000"
+ITDF_ALIQ_IPI="         0,0000"
+ITDF_VLR_IPI="         0,0000"
+ITDF_VLR_BC_ISS="         0,0000"
+ITDF_ALIQ_ISS="         5,0000"
+ITDF_VLR_ISS="         0,0000"
+ITDF_VLR_BC_ISS_RTD="         0,0000"
+ITDF_ALIQ_ISS_RTD="         0,0000"
+ITDF_VLR_ISS_RTD="         0,0000"
+ITDF_VLR_BC_PIS="         0,0000"
+ITDF_ALIQ_PIS="         1,6500"
+ITDF_QTDE_BC_PIS="         4,0000"
+ITDF_VLR_PIS="         0,0000"
+ITDF_VLR_PIS_RTD="         0,0000"
+ITDF_VLR_BC_COFINS="         0,0000"
+ITDF_ALIQ_COFINS="         7,6000"
+ITDF_QTDE_BC_COFINS="         4,0000"
+ITDF_VLR_COFINS="         0,0000"
+ITDF_VLR_COFINS_RTD="         0,0000"
+ITDF_VLR_BC_IR="         0,0000"
+ITDF_ALIQ_IR="         0,0000"
+ITDF_VLR_IR="         0,0000"
+ITDF_VLR_IR_RTD="         0,0000"
+ITDF_VLR_BC_CSLL="         0,0000"
+ITDF_ALIQ_CSLL="         0,0000"
+ITDF_VLR_CSLL="         0,0000"
+ITDF_VLR_ADIANTAMENTO_CSLL="         0,0000"
+ITDF_LANC_AUTOMATICO="SIM"
+ITDF_CLAS_CONS_SERV_TELECOM="00"
+ITDF_CLAS_CONS_GAS="00"
+ITDF_CLAS_CONS_AGUA="00"
+ITDF_CLAS_CONS_ENERGIA_ELETR="00"
+ITDF_ALIQ_ICMS_SO="         0,0000"
+ITDF_IND_MOD_BC_ICMS="3"
+ITDF_PERCENTUAL_ACRESCIMO="         0,0000"
+ITDF_PERCENTUAL_DESCONTO="         0,0000"
+ITDF_PRECO_VENDA_UNITARIO="      1005,9300"
+ITDF_VLR_ABATE_NT="         0,0000"
+ITDF_VLR_ACRESCIMO="         0,0000"
+ITDF_VLR_BC_BRUTA_ICMS_SO="         0,0000"
+ITDF_VLR_BC_ICMS_SO="         0,0000"
+ITDF_VLR_BC_ISENTA_IPI="         0,0000"
+ITDF_VLR_COFINS_IMPORTACAO="         0,0000"
+ITDF_VLR_DESPESAS="         0,0000"
+ITDF_VLR_ICMS_SO="         0,0000"
+ITDF_VLR_PIS_IMPORTACAO="         0,0000"
+ITDF_VLR_PRODUTOS="      4023,7200"
+ITDF_VLR_SERVICO_NT="         0,0000"
+ITDF_VLR_SERVICOS="         0,0000"
+ITDF_VLR_TRIBUTOS="         0,0000"
+ITDF_ORIGEM_MERCADORIA="0"
+ITDF_O_ITEM_E_SERVICO="N"
+ITDF_VLR_PRODUTOS_SERVICOS="      4023,7200"
+ITDF_GTIM="              "
+ITDF_NCM="40111000"
+ITDF_EX_TIPI="          "
+ITDF_GENERO="          "
+ITDF_GTIM_UNIDADE_TRIBUTAVEL="          "
+ITDF_UNIDADE_TRIBUTAVEL="PC    "
+ITDF_VLR_UNIDADE_TRIBUTAVEL="      1005,9300"
+ITDF_QTDE_UNIDADE_TRIBUTAVEL="         4,0000"
+ITDF_CLS_CODIGO_LISTA_SERVICO="    "
+ITDF_IND_MOD_BC_ICMS_RTD="0"
+ITDF_QTDE_BC_COFINS_RTD="         0,0000"
+ITDF_VLR_ALIQ_COFINS_RTD="         0,0000"
+ITDF_IND_MED_BC_ICMS_RTD=""
+DFIS_CNPJ="01536085000513"
+/>
+        </ROWDATA>                                                                                                                                                                                                                                            
+    </DATAPACKET>                                                                                                                                                                                                                                             

@@ -1,0 +1,208 @@
+PRM_DOC = 100
+
+SELECT ;
+	 "bb"                    as nm_bano;
+	,dup.vlr_doc             as valor;
+    ,dup.num_no_bco          as nosso_numero;
+    ,dup.agencia             as agencia;
+    ,dup.conta               as conta;  
+	,dup.convenio            as convenio;
+	,dup.dt_venc             as DATA_VENCIMENTO;
+	,emp.nome                as cedente;
+    ,emp.cgc                 as cpf_cnpj_beneficiario; 	
+    ,dup.nome                as sacado;
+    ,dup.cliente             as cpf_cnpj_pagador;
+FROM ;
+   DUPLICAT DUP,;
+   EMPRESA EMP;
+WHERE ;
+       DUP.EMPRESA = EMP.EMPRESA ;
+   AND  ;
+       DUP.NOTA = PRM_DOC
+
+COPY FIELDS EMPRESA,SIGLA TO  X:\TMP\TESTE.TXT TYPE SDF  DELIMITED WITH  | 
+MODIF COMM  X:\TMP\TESTE.TXT
+       
+   
+      
+FUNCTION NFVrfSeqNroNotas
+PARAMETER PrmEmp,PrmDtIni,PrmDtFim, PrmArquivoLog
+
+
+
+
+    PRIVATE ARQNota,ALSNota
+	LSalias = ALIAS()
+
+    ARQNota     = NetArqAgain("NOTA")
+    ALSNota     = Alias()
+
+	IF ( ARQNota) > 100000 && HOUVE FALHA DE ABERTURA
+        =up_fecha("&ALSNota")
+		IF !EMPTY(LSalias) AND USED(LSalias)
+			SELECT &LSalias
+		ENDIF
+		RETURN(.F.)
+	ENDIF
+
+
+	=W_DEFPROC("DOCFISCA.SPR")
+	=DFVerifyInst()
+
+
+
+	SELE &ALSNota
+	SET ORDER TO TAG DATA
+	SET NEAR ON
+	SEEK STR(PrmEmp,3)+DTOS(PrmDtIni)
+	SET NEAR OFF
+
+
+	HINI =TIME()
+	CTR = 1
+	MSG  = HINI
+
+
+
+	SET TALK ON
+	SELECT NF.NOTA,NF.DATA ;
+	FROM &ALSNota NF;
+	WHERE   NF.empresa = PrmEmp ;
+		AND NF.data >= PrmDtIni ;
+    	AND NF.data <= PrmDtFim ;
+    INTO CURSOR NFselec;
+    ORDER BY NF.NOTA
+	SET TALK OFF
+
+
+
+
+	*----------------------------------------------------*
+	DO RELINIC.PRG          && INICIA VAR P/ TERMOMETRO
+
+	LFsegue = .t.
+
+	GO TOP
+	LNregistro = RECNO()
+
+	SELE NFselec
+
+	COUNT  TO LNimpressao
+	GO LNregistro
+	LNimpressos = 0
+	*----------------------------------------------------*
+
+
+   	PRIVATE LSfileXML,LNroIDfileXML, LSnomeArqXml
+
+	IF TYPE("PrmArquivoLog") = "U" OR EMPTY(PrmArquivoLog)
+		LSnomeArqXml = "\TMP\SEQ_NOTA.TXT"
+	ELSE
+		LSnomeArqXml = PrmArquivoLog
+	ENDIF
+   	LSfileXML	= LSnomeArqXml
+
+
+
+  	LNroIDfileXML 		=fcreate(LSfileXML)
+   	if LNroIDfileXML<0
+      =fclose(LNroIDfileXML)
+      wait 'ERRO cria‡Æo arquivo tempor rio '+LSfileXML+'- <ENTER> ' window
+      return
+   	endif
+
+
+	*---------------------------------------------------*
+	PRIVATE LctrSeq, LString
+	LctrSeq = NFselec.nota
+
+	LString = "Inicio Verificacao"
+
+	=fPuts(LNroIDfileXML,LString,LEN(LString))
+
+
+	SELE NFselec
+	DO WHILE !EOF() AND	LFsegue = .t.
+		
+		=UPtermo()
+
+		IF 	LctrSeq <> NFselec.nota
+
+			LString = "      "
+			=fPuts(LNroIDfileXML,LString,LEN(LString))
+
+			LString = "       -Faltam nro entre: "+;
+			          STR(LctrSeq,7) +;
+					  " e "+;	
+			          STR( NFselec.nota ,7) +;
+					  " de "+;	
+			          DTOC( NFselec.data )
+			
+			
+			=fPuts(LNroIDfileXML,LString,LEN(LString))
+
+			LString = "      "
+			=fPuts(LNroIDfileXML,LString,LEN(LString))
+
+			LctrSeq = NFselec.nota
+
+		ELSE
+
+			LString = STR(LctrSeq,7) +;
+					  " OK "+;
+					  " de "+;	
+			          DTOC( NFselec.data )
+
+			=fPuts(LNroIDfileXML,LString,LEN(LString))
+		ENDIF
+
+
+		SELE  NFselec
+		SKIP
+
+		LctrSeq  = LctrSeq + 1
+
+	ENDDO
+
+	SELE NFselec
+	USE
+
+	LString = "Final Verificacao"
+
+	=fPuts(LNroIDfileXML,LString,LEN(LString))
+
+    =fclose(LNroIDfileXML)
+
+	DO RELFIM.PRG          && FIM VAR P/ TERMOMETRO
+	*-----------------------------------------------*
+    =up_fecha("&ALSNota")
+	IF !EMPTY(LSalias) AND USED(LSalias)
+		SELECT &LSalias
+	ENDIF
+
+
+
+
+
+
+	*****************************************
+	SET SYSMENU ON
+	PUSH MENU _MSYSMENU
+	SET SYSMENU TO _MWINDOW, _MWI_ZOOM,_MWI_MOVE, _MEDIT, _MED_FIND, ;
+						_MED_FINDA
+	HIDE MENU _MSYSMENU
+	ON KEY LABEL F10    KEYBOARD "{CTRL-F10}"
+
+	******************************************
+
+	KEYBOARD "{CTRL-F10}"
+	MODIF COMM &LSnomeArqXml   NOEDIT
+
+	*****************************************
+	POP MENU _MSYSMENU
+	SET SYSMENU OFF
+	HIDE MENU _MSYSMENU
+	*****************************************
+
+
+RETURN(.t.)

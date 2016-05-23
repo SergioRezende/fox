@@ -1,0 +1,19 @@
+	       m.cliente  =   STR( &LSAlsClt .cliente,14)
+*--	       m.nome     =   &LSAlsDupl .nome
+	       m.razao    =   &LSAlsClt .nome
+	       m.uf       =   &LSAlsClt .estado
+	       m.ie       =   &LSAlsClt .inscricao
+	       m.im       =   &LSAlsClt .im_tomador
+	       m.logr     =   &LSAlsClt .endereco
+	       m.nro_logr =   &LSAlsClt .nro_logr
+	       m.compllogr=   ""
+	       m.cep      =   &LSAlsClt .cep
+	       m.muni_ibge=   ALLTRIM( STR( &LSAlsClt .muni_ibge ,11))
+	       m.muni_nome=   &LSAlsClt .cidade
+	       m.bairro   =   &LSAlsClt .bairro
+	       m.codpais  =   ""
+
+          m.pais     =   "Brasil"
+*	       m.ddd      =   &LSAlsClt .ddd
+	       m.fone     =   &LSAlsClt .fone
+	       m.email    =   &LSAlsClt .e_mail

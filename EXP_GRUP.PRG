@@ -1,0 +1,156 @@
+
+SET STEP ON
+
+SET DATE GERMAN
+SET CENTU ON
+
+CLOSE DATA
+SET DELE ON
+SET EXCL OFF
+SET TALK ON
+SET ESCAPE ON
+
+
+*SELECT ;
+*IT.CODIGO,;
+*	MAX(IT.DATA) AS DT_ULT_MOV ;
+*FROM X:\SCGC\CENTRAL\ITEMMOV IT;
+*INTO TABLE ;
+*	X:\TMP\ULT_MOV;
+*GROUP BY ;
+*	IT.CODIGO	
+
+CLOSE DATA
+
+SELE 0
+	USE	X:\TMP\ULT_MOV  ALIAS ULT
+	SET ORDER TO TAG CODIGO
+
+SELE 0
+*	USE  Q:\SCGC\COMUM\TAB001 ALIAS TPC
+*	COPY TO X:\TMP\TPC WITH CDX
+
+	USE  X:\TMP\TPC ALIAS TPC 
+	SET ORDER TO TAG CODIGO 
+
+SELE 0
+	
+	
+*	USE  Q:\SCGC\COMUM\TAB001 ALIAS TPI
+*	COPY TO X:\TMP\TPI WITH CDX
+	USE  X:\TMP\TPI ALIAS TPI
+	SET ORDER TO TAG CODIGO 
+
+
+SELE 0
+	USE X:\TMP\MARCA ALIAS MRC
+	SET ORDER TO TAG MARCA 
+
+SELE 0
+	USE X:\SCGC\COMUM\GRUPO ALIAS GR
+
+	SET RELATION TO ("TPC"+str(tp_control,1)) INTO TPC
+
+ 	SET RELATION TO 'TPI'+tipo_Item INTO TPI ADDITIVE
+
+ 	SET RELATION TO CODIGO  INTO  ULT  ADDITIVE
+
+ 	SET RELATION TO (STR(INT(VAL(LEFT(classifica,2))),2)+STR(marca,2))  ;
+ 			  INTO  MRC  ADDITIVE
+	
+	SET SKIP TO TPC
+	SET SKIP TO TPI
+	SET SKIP TO ULT
+	SET SKIP TO MRC
+	
+
+
+BROWS FIELDS ;
+ GR.CLASSIFICA  ,;    
+ GR.CODIGO      ,;    
+ GR.DESCRICAO   ,;    
+ GR.CDG_NO_FBR  ,;    
+ GR.CDG_TIPO    ,;    
+ GR.ARO         ,;    
+ GR.MARCA       ,;    
+ MRC.DESC_MARCA,; 
+ GR.PESO        ,;    
+ GR.KGBORRACHA  ,;    
+ GR.UNIDADE     ,;    
+ GR.IVA         ,;    
+ GR.ALIQ_IPI    ,;    
+ GR.GRPDSCFORN  ,;    
+ GR.EMPRESAS    ,;    
+ GR.TAB_PRECO   ,;    
+ GR.ORIGEM      ,;    
+ GR.TP_MERCAD   ,;    
+ GR.TP_CONTROL  ,;
+ TPC.DESC_TPC  ,;
+ GR.STATUS      ,;    
+ GR.ORDEM       ,;    
+ GR.FABRICANTE  ,;    
+ GR.CODFORN     ,;    
+ GR.FLG_DESCRI  ,;    
+ GR.COD_NCM     ,;    
+ GR.COD_GENERO  ,;    
+ GR.COD_LSTSRV  ,;    
+ GR.APLICACAO   ,;    
+ GR.TIPO_ITEM   ,;    
+ TPI.DESC_TPI  ,;    
+ GR.COD_COMB    ,;    
+ GR.COD_GTIM    ,;    
+ GR.EX_TIPI     ,;    
+ GR.CTA_CONTAB  ,;    
+ GR.PERFIL_01   ,;    
+ GR.CEST        ,;  
+ ULT.DT_ULT_MOV
+  
+
+
+COPY TO  ;
+	X:\TMP\EXP_GRUPO ;
+	FIELDS ;
+ GR.CLASSIFICA  ,;    
+ GR.CODIGO      ,;    
+ GR.DESCRICAO   ,;    
+ GR.CDG_NO_FBR  ,;    
+ GR.CDG_TIPO    ,;    
+ GR.ARO         ,;    
+ GR.MARCA       ,;    
+ MRC.DESC_MARCA,; 
+ GR.PESO        ,;    
+ GR.KGBORRACHA  ,;    
+ GR.UNIDADE     ,;    
+ GR.IVA         ,;    
+ GR.ALIQ_IPI    ,;    
+ GR.GRPDSCFORN  ,;    
+ GR.EMPRESAS    ,;    
+ GR.TAB_PRECO   ,;    
+ GR.ORIGEM      ,;    
+ GR.TP_MERCAD   ,;    
+ GR.TP_CONTROL  ,;
+ TPC.DESC_TPC  ,;
+ GR.STATUS      ,;    
+ GR.ORDEM       ,;    
+ GR.FABRICANTE  ,;    
+ GR.CODFORN     ,;    
+ GR.FLG_DESCRI  ,;    
+ GR.COD_NCM     ,;    
+ GR.COD_GENERO  ,;    
+ GR.COD_LSTSRV  ,;    
+ GR.APLICACAO   ,;    
+ GR.TIPO_ITEM   ,;    
+ TPI.DESC_TPI  ,;    
+ GR.COD_COMB    ,;    
+ GR.COD_GTIM    ,;    
+ GR.EX_TIPI     ,;    
+ GR.CTA_CONTAB  ,;    
+ GR.PERFIL_01   ,;    
+ GR.CEST        ,;  
+ ULT.DT_ULT_MOV
+  
+              
+
+
+    
+

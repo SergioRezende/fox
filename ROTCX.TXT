@@ -1,0 +1,9 @@
+1 - Grava Lancamento
+2 - Verifica Saldo
+3 - Transfere Saldo
+4 - Localiza conta contabil
+5 - Recebe Lancamento
+6 - Faz Fechamento
+7 - Testa Senha
+8 - Gerar Arquivo para Transferencia
+9 - Receber Arquivo para Transferencia 

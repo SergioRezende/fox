@@ -1,0 +1,8 @@
+CATMAN   = OFF
+OVERLAY  = D:
+EDITWORK = D: 
+PROGWORK = D:
+TMPFILES = D:
+BELL     = OFF
+
+

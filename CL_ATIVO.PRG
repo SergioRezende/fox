@@ -1,0 +1,154 @@
+close data
+set excl off
+set talk on
+set dele on
+set date german
+set centu on
+
+
+
+use q:\scgc\central\clientes
+SET ORDER TO TAG CLIENTE
+
+
+
+*------------------------------------
+*---- 2015
+*------------------------------------
+
+SELECT 0
+use q:\scgc\central\nota
+SET ORDER TO TAG DATA 
+
+SET RELATION TO FAVORECIDO INTO CLIENTES
+
+set near on
+seek STR(6,3)+DTOS({2015.01.01})
+
+*------------------------------------
+* brows fields empresa, ;
+*             data,;
+*             favorecido,;
+*             fone,;
+*             nome;
+*       for clientes.cliente > 0 rest
+*------------------------------------
+
+copy to x:\tmp\cl2015.dbf ;
+     fields ;
+            clientes.empresa,;
+            tp_pessoa,;
+            data,;
+            favorecido,;
+            fone,;
+            nome;
+       for clientes.cliente > 0 ;
+          and year(nota.data) = 2015;
+  while empresa = 6
+
+*------------------------------------
+*---- 2012
+*------------------------------------
+
+use o:\scgc2012\central\nota
+SET ORDER TO TAG DATA
+
+SET RELATION TO FAVORECIDO INTO CLIENTES
+
+set near on
+seek STR(6,3)+DTOS({2012.01.01})
+
+
+copy to x:\tmp\cl2012.dbf ;
+     fields ;
+            clientes.empresa,;
+            tp_pessoa,;
+            data,;
+            favorecido,;
+            fone,;
+            nome;
+       for clientes.cliente > 0 ;
+          and year(nota.data) = 2012;
+  while empresa = 6
+
+*------------------------------------
+*---- 2013
+*------------------------------------
+use o:\scgc2013\central\nota
+SET ORDER TO TAG DATA
+
+SET RELATION TO FAVORECIDO INTO CLIENTES
+
+set near on
+seek STR(6,3)+DTOS({2013.01.01})
+
+copy to x:\tmp\cl2013.dbf ;
+     fields ;
+            clientes.empresa,;
+            tp_pessoa,;
+            data,;
+            favorecido,;
+            fone,;
+            nome;
+       for clientes.cliente > 0 ;
+          and year(nota.data) = 2013;
+  while empresa = 6
+  
+*------------------------------------
+*------------------------------------
+*---- 2014
+*------------------------------------
+use o:\scgc2014\central\nota
+SET ORDER TO TAG DATA
+
+SET RELATION TO FAVORECIDO INTO CLIENTES
+
+set near on
+seek STR(6,3)+DTOS({2014.01.01})
+
+copy to x:\tmp\cl2014.dbf ;
+     fields ;
+            clientes.empresa,;
+            tp_pessoa,;
+            data,;
+            favorecido,;
+            fone,;
+            nome;
+       for clientes.cliente > 0 ;
+          and year(nota.data) = 2014;
+  while empresa = 6
+  
+*------------------------------------
+
+
+*------------------------------------
+close data
+
+
+use x:\tmp\cl2012
+append from x:\tmp\cl2013
+append from x:\tmp\cl2014
+append from x:\tmp\cl2015
+
+select ;
+     empresa,;
+     tp_pessoa,;
+     favorecido,;
+     fone,;
+     nome,;
+     max(data) as ult_data;
+from  x:\tmp\cl2012 ;
+group by ;
+     empresa,;
+     tp_pessoa,;
+     favorecido,;
+     nome;
+order by ;
+     nome ;
+into table ;
+   x:\tmp\cl_cgb     
+     
+
+
+
+

@@ -1,0 +1,17 @@
+USE X:\TMP\H010
+APPEND FROM X:\TMP\ARQTAB\H010.TXT ;
+   FIELDS ;
+   EMPRESA,;
+   SIGLA,;
+   ANO,;
+   REG,;
+   CODIGO,;
+   UNID,;
+   QTDE,;
+   VL_UNIT,;
+   VL_ITEM,;
+   IND_PROP,;
+   COD_PART,;
+   TXT_COMP,;
+   COD_CTA ;
+   DELIMITED WITH TAB

@@ -1,0 +1,49 @@
+set excl off
+set dele on
+set date german
+set centu on
+
+
+
+DO DF
+
+SELECT 0
+use q:\scgc\loja\nota 
+
+
+
+
+
+set step on
+
+
+
+sele nota
+COPY FIELDS ;
+       NOTA.EMPRESA;
+      ,NOTA.DATA;
+      ,NOTA.TIPO;
+      ,NOTA.OPERACAO;
+      ,NOTA.ORCAMENTO;
+      ,NOTA.NOTA;
+      ,NOTA.STATUS ;
+  TO X:\TMP\NFS ;
+  FOR ;
+    LEFT(NOTA.OPERACAO,1) = "S" ;
+    AND    NOTA.DATA >= {01.10.2014} 
+
+    
+
+SELECT 0
+use q:\scgc\loja\itemmov 
+COPY FIELDS ;
+       itemmov.EMPRESA;
+      ,itemmov.DATA;
+      ,itemmov.TIPO;
+      ,itemmov.OPERACAO;
+      ,itemmov.ORCAMENTO;
+      ,itemmov.NOTA;
+  TO X:\TMP\ITS ;
+  FOR ;
+    LEFT(itemmov.OPERACAO,1) = "S" ;
+    AND    itemmov.DATA >= {01.10.2014} 

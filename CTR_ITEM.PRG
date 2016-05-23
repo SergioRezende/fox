@@ -1,0 +1,48 @@
+
+SELECT ;
+   TMP.EMPRESA      AS EMPRESA;
+  ,EMP.SIGLA        AS SIGLA;
+  ,NF.DATA          AS DATA;
+  ,NF.NOTA-3000000  AS NOTA;
+  ,""               AS MOD_DOC;
+  ,NF.STATUS        AS SITUACAO;
+  ,NF.TIPO          AS TIPO;
+  ,"Emitido"        AS TP_PROC;
+  ,"saida"          AS MOVIMENTO;
+  ,SUM(1)  AS CTR ;
+FROM ;
+   Q:\SCGC\LOJA\ITEMMOV   TMP;
+ , Q:\SCGC\LOJA\NOTA      NF;
+ , Q:\SCGC\LOJA\EMPRESA   EMP;
+WHERE ;
+      NF.EMPRESA = TMP.EMPRESA;
+  AND EMP.EMPRESA = TMP.EMPRESA;
+  AND;
+	  (   TMP.NOTA >3000000;
+	  AND TMP.NOTA <4000000;
+	  ) ;  
+  AND NF.NOTA = TMP.NOTA;
+  AND NF.DATA >= {01.10.2014} ;
+  AND LEFT(NF.OPERACAO,1) = "S" ;
+GROUP BY ;
+   TMP.EMPRESA ;
+  ,EMP.SIGLA;
+  ,NF.DATA;
+  ,NF.NOTA;
+  ,NF.STATUS;
+  ,NF.TIPO;
+ORDER BY  ;
+   TMP.EMPRESA ;
+  ,EMP.SIGLA;
+  ,NF.DATA;
+  ,NF.NOTA;
+  ,NF.STATUS;
+  ,NF.TIPO;
+INTO TABLE ;
+  X:\TMP\CTR_ITEM  
+
+ 
+  
+  
+  
+  

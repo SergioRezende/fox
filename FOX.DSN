@@ -1,0 +1,10 @@
+[ODBC]
+DRIVER=Microsoft Visual FoxPro Driver
+UID=
+Deleted=Yes
+Null=Yes
+Collate=Machine
+BackgroundFetch=Yes
+Exclusive=No
+SourceType=DBF
+SourceDB=c:\FPD26\PROG

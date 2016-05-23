@@ -1,0 +1,1 @@
+   	USE Q:\SCGC\COMUM\DMS  EXCL

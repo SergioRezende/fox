@@ -1,0 +1,124 @@
+   SET DATE GERMAN
+   SET CENTU ON
+   SET DELE ON
+   
+*   =xmlCapa55(1,{01.01.2013},{05.01.2013})
+
+   =xmlItem55(1,{01.01.2013},{05.01.2013})
+
+
+RETURN
+
+FUNCTION XMLCapa55
+PARAMETER PrmEmpresa,PrmDataInicio,PrmDataFinal
+ 
+    SET TALK OFF
+
+	SELECT 	;
+	    '<ROW UNEM_CNPJ="'             +STR(EMP.CGC,14)          +'"'+CHR(13)   AS T01,;
+	    'UNEM_IE="'                    +LP(EMP.INSCRICAO)            +'"'+CHR(13)   AS T01,;
+	    'DFIS_MOD_DOCUMENTO="'         +'55'                     +'"'+CHR(13)   AS T02,;
+	    'DFIS_IND_OPERACAO="'          +'1'                      +'"'+CHR(13)   AS T03,;
+	    'DFIS_TP_MOVIMENTO="'          +"SAIDA"                  +'"'+CHR(13)   AS T04,;
+	    'DFIS_NRO_DOCUMENTO="'         +STR((NF.NOTA - 3000000),8) +'"'+CHR(13)   AS T05,;
+	    'DFIS_SERIE="'                 +NF.SERIE                 +'"'+CHR(13)   AS T07,;
+	    'DFIS_STATUS_DESCRICAO="'      +NFE_STATUS               +'"'+CHR(13)   AS T10,;
+	    'DFIS_CPFCNPJ="'               +STR(NF.FAVORECIDO,14)    +'"'+CHR(13)   AS T11,;
+	    'DFIS_IE="'                    +NF.INSCRICAO             +'"'+CHR(13)   AS T12,;
+	    'DFIS_DT_DOC="'                +DTOC(NF.DATA)            +'"'+CHR(13)   AS T13,;
+	    'DFIS_VLR_DOCUMENTO="'         +STR(NF.TOTAL_NOTA,18,2)  +'"'+CHR(13)   AS T14,;
+	    'DFIS_IND_DOC_ELETRONICO="'    +'SIM'                    +'"'+CHR(13)   AS T15,;
+	    '/>' AS T99 ;
+   	FROM   q:\scgc\loja\empresa EMP ,;
+   	       q:\scgc\loja\nota NF ;
+   	WHERE ;
+	 	       NF.empresa = PrmEmpresa;
+	       and NF.tipo <> "CPM" ;
+ 	       and NF.nota > 3000000 ;
+		   and NF.nota < 4000000 ;
+ 	       and NF.data <= PrmDataFinal ;
+ 	       and NF.data >= PrmDataInicio ;
+   	 TO FILE X:\TMP\NOTA.TXT ;
+   	 NOCONSOLE
+
+
+FUNCTION XMLItem55
+
+PARAMETER PrmEmpresa,PrmDataInicio,PrmDataFinal
+ 
+    SET TALK OFF
+
+	SELECT 	;
+	    '<ROW UNEM_CNPJ="'         +STR(EMP.CGC,14)          +'"'+CHR(13)   AS T01,;
+	    'UNEM_IE="'                +LP(EMP.INSCRICAO)         +'"'+CHR(13) AS T01,;
+	    'DFIS_MOD_DOCUMENTO="'     +'55'                  +'"'+CHR(13) AS T02,;
+	    'DFIS_IND_OPERACAO="'      +'1'                   +'"'+CHR(13) AS T03,;
+	    'DFIS_TP_MOVIMENTO="'      +"SAIDA"               +'"'+CHR(13) AS T04,;
+	    'DFIS_NRO_DOCUMENTO="'         +STR((NF.NOTA - 3000000),8) +'"'+CHR(13) AS T05,;
+	    'DFIS_SERIE="'             +NF.SERIE              +'"'+CHR(13) AS T07,;
+	    'DFIS_STATUS="'                +NFE_STATUS               +'"'+CHR(13)   AS T10,;
+	    'DFIS_CPFCNPJ="'               +STR(NF.FAVORECIDO,14)    +'"'+CHR(13)   AS T11,;
+	    'DFIS_IE="'                    +NF.INSCRICAO             +'"'+CHR(13)   AS T12,;
+	    'DFIS_DT_DOC="'                +DTOC(NF.DATA)            +'"'+CHR(13)   AS T13,;
+	    'DFIS_VLR_DOCUMENTO="'         +STR(NF.TOTAL_NOTA,18,2)  +'"'+CHR(13)   AS T14,;
+	    'ITDF_CFOP="'              +LP(IT.CFO)                +'"'+CHR(13) AS T16,;
+	    'ITDF_PRODUTO="'           +IT.CODIGO             +'"'+CHR(13) AS T17,;
+	    'ITDF_QTDE="'              +STR(IT.QTDE,5)                  +'"'+CHR(13) AS T18,;
+	    'ITDF_VLR_FINAL="'         +STR(IT.VLRVENDA,18,2) +'"'+CHR(13) AS T19,;
+	    '/>' AS T99 ;
+   	FROM   q:\scgc\loja\empresa EMP ,;
+   	       q:\scgc\loja\nota    NF ,;
+   	       q:\scgc\loja\itemmov IT ;
+   	WHERE ;
+	 	       NF.empresa = PrmEmpresa;
+	       and NF.tipo <> "CPM" ;
+ 	       and NF.nota > 3000000 ;
+		   and NF.nota < 4000000 ;
+ 	       and NF.data <= PrmDataFinal ;
+ 	       and NF.data >= PrmDataInicio ;
+ 	       AND IT.EMPRESA = PrmEmpresa ;
+ 	       AND LEFT(IT.OPERACAO,1) = "S";
+ 	       AND IT.NOTA = NF.NOTA ;
+   	 TO FILE X:\TMP\NOTA.TXT ;
+   	 NOCONSOLE
+
+
+RETURN
+
+
+FUNCTION LP
+PARAMETERS PrmString
+	*-------------------------------------------------------*
+	PRIVATE LSstatus
+	LSstatus = "" 
+	*-------------------------------------------------------*
+	*PRMString = UPPER(PRMString)
+
+	PRMString = chrtran(PRMString,".","")       && 01
+	PRMString = chrtran(PRMString,"/","")       && 01
+	PRMString = chrtran(PRMString,"-","")       && 01
+
+	PRMString = chrtran(PRMString,"€","C")       && 01
+	PRMString = chrtran(PRMString,"‡","c")       && 02
+	PRMString = chrtran(PRMString,"¦","-")       && 04
+	PRMString = chrtran(PRMString,"§","-")       && 05
+	PRMString = chrtran(PRMString,"°",'')        && 06
+	PRMString = chrtran(PRMString,"º",'')        && 07
+	PRMString = chrtran(PRMString,"",'E')       && 08
+	PRMString = chrtran(PRMString,"‚",'e')       && 09
+	PRMString = chrtran(PRMString,"Ç",'A')       && 10
+	PRMString = chrtran(PRMString,"Æ",'a')       && 11
+	PRMString = chrtran(PRMString,"ø",'')        && 12
+	PRMString = chrtran(PRMString,chr(0),'')     && 13
+	PRMString = chrtran(PRMString,'"','')        && 14
+	PRMString = chrtran(PRMString,'Ã','A')        && 14
+	PRMString = chrtran(PRMString,'>',' ')        && 14
+	PRMString = chrtran(PRMString,'<',' ')        && 14
+	
+
+
+	PRMString = strtran(PRMString,"&","&amp;")       && 03
+	
+
+
+RETURN(PrmString)

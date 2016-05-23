@@ -1,0 +1,23 @@
+	SELE 0
+	USE  xmlDIFIS EXCL
+	ZAP 
+	PACK
+
+	*------------------------------------------------------------*
+	* ESTE COMANDO SERVA PARA ELIMINAR CARACTERES INDESEJADOS
+	* DO CABECALHO XML
+	*-----------------------------------------------------------*
+
+	APPEND FROM X:\TMP\DOCfisit.XML TYPE SDF
+
+
+	
+	REPLACE ALL XML_LINHA WITH chrtran(XML_LINHA,chr(9),chr(32))
+	REPLACE ALL XML_ORDEM WITH RECNO()
+	GO BOTT
+	SKIP -1
+	REPLACE XML_ORDEM WITH 9999999999901
+	SKIP	
+	REPLACE XML_ORDEM WITH 9999999999902
+	USE
+		  

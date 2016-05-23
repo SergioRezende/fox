@@ -1,0 +1,282 @@
+ SET DELE ON
+
+ LNzera = val("0000000000000000000000,00")
+ close data
+
+ LSdir = "Q:\SCGC\LOJA\"
+ 
+ LNemp = 1
+ 
+ LDdataInventario = {31.12.2013}
+ 
+ 
+* ======================================= *
+
+ LSFileSaldo = LSdir + "SALDO" 
+  
+
+ LSFileGrupo = LSdir + "GRUPO" 
+ 
+
+
+ LSFileItemmov = LSdir + "ITEMMOV" 
+ 
+ 
+* ======================================= *
+
+
+
+ set centu on 
+ set date german
+
+ use &LSFileSaldo alias saldo
+
+ sele 0
+ use &LSFileGrupo alias grupo
+ 
+ sele 0
+ use LSFileItemmov alias ITEMMOV
+
+
+
+* ======================================= *
+* =ULLvrInvt(LNemp,LDdataInventario)
+ 
+
+ =ULSLD(LNemp,LDdataInventario)
+
+ =ULQLA(LNemp,LDdataInventario)
+
+ =ULSCA(LNemp,LDdataInventario)
+
+ =ULUnion()
+ 
+ =ULSomaInvt()
+ 
+ =ULInvtFinal()
+ 
+
+
+return
+
+
+
+FUNCTION ULLvrInvt
+PARAMETERS PrmEmp,PrmDtFim
+
+	*-------------------------------------------------------------------*
+	*-------------------------------------------------------------------*
+	SELECT 	;
+			PrmEmp AS EMPRESA,;
+			PrmDtFim AS DATA,;			
+			"0" AS IND_PROP,;
+	        "00000000000" AS CPF,;
+	        "00000000000000" AS CNPJ,;
+	        "0" AS IND_INV,;
+	        GR.COD_NCM,;
+			GR.CODIGO AS COD_ITEM,;	        
+			gr.unidade as unid,;
+			IIF(SL.SLD_ATU=0,SL.SLD_ATU*0,SL.VLR_ATU/SL.SLD_ATU);
+			     AS VL_UNIT,;
+			SL.SLD_ATU AS QTD,;
+			SL.VLR_ATU AS VL_ITEM,;
+			GR.CTA_CONTAB, ;
+			GR.DESCRICAO ;
+    FROM GRUPO GR,;
+         SALDO SL;
+    WHERE ;
+        	gr.cdg_tipo = 4;
+        AND (gr.tp_control = 1 or gr.tp_control = 4);
+        AND STRTRAN(STR(PrmEmp,3),' ','0') $ gr.empresas ;
+        AND SL.EMPRESA = PrmEmp ;
+     	AND SL.CODIGO = GR.CODIGO ;
+        AND YEAR(SL.DTABERT) = YEAR(PrmDtFim);
+        AND MONTH(DTABERT) = MONTH(PrmDtFim) ;
+    ORDER BY GR.CODIGO;
+   	INTO TABLE  \TMP\INVNTRIO
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+
+FUNCTION ULSld
+PARAMETERS PrmEmp,PrmDtFim
+
+	*-------------------------------------------------------------------*
+	SELECT 	;
+			PrmEmp           AS EMPRESA,;
+			GR.CODIGO        AS COD_ITEM,;	        
+			SUM(SL.SLD_ATU)  AS SLD,;
+			SUM(LNzera)      AS QLA,;
+			SUM(LNzera)      AS SCA;
+    FROM GRUPO GR,;
+         SALDO SL;
+    WHERE ;
+        	gr.cdg_tipo = 4;
+        AND (gr.tp_control = 1 or gr.tp_control = 4);
+        AND STRTRAN(STR(PrmEmp,3),' ','0') $ gr.empresas ;
+        AND SL.EMPRESA = PrmEmp ;
+     	AND SL.CODIGO = GR.CODIGO ;
+        AND YEAR(SL.DTABERT) = YEAR(PrmDtFim);
+        AND MONTH(DTABERT) = MONTH(PrmDtFim) ;
+    ORDER BY GR.CODIGO;
+    GROUP BY GR.CODIGO;
+   	INTO TABLE  \TMP\SLD
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+
+
+FUNCTION ULQLA
+PARAMETERS PrmEmp,PrmDtFim
+
+	*-------------------------------------------------------------------*
+	*-------------------------------------------------------------------*
+	SELECT 	;  
+			PrmEmp           AS EMPRESA,;
+			GR.CODIGO        AS COD_ITEM,;	        
+			SUM(LNzera)      AS SLD,;
+			SUM(IT.QTDE)     AS QLA,;
+			SUM(LNzera)      AS SCA;
+    FROM GRUPO GR,;
+         ITEMMOV IT;
+    WHERE ;
+        	gr.cdg_tipo = 4;
+        AND (gr.tp_control = 1 or gr.tp_control = 4);
+        AND STRTRAN(STR(PrmEmp,3),' ','0') $ gr.empresas ;
+        AND IT.EMPRESA = PrmEmp ;
+     	AND IT.CODIGO = GR.CODIGO ;
+     	AND IT.TIPO = "QLA" ;
+        AND YEAR(IT.DATA) = YEAR(PrmDtFim);
+        AND MONTH(IT.DATA) <= MONTH(PrmDtFim) ;
+    ORDER BY GR.CODIGO;
+    GROUP BY GR.CODIGO;
+   	INTO TABLE  \TMP\QLA
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+FUNCTION ULSCA
+PARAMETERS PrmEmp,PrmDtFim
+
+	*-------------------------------------------------------------------*
+	*-------------------------------------------------------------------*
+	SELECT 	;
+			PrmEmp           AS EMPRESA,;
+			GR.CODIGO        AS COD_ITEM,;	        
+			SUM(LNzera)      AS SLD,;
+			SUM(LNzera)      AS QLA,;
+			SUM(IT.QTDE)     AS SCA;
+    FROM GRUPO GR,;
+         ITEMMOV IT;
+    WHERE ;
+        	gr.cdg_tipo = 4;
+        AND (gr.tp_control = 1 or gr.tp_control = 4);
+        AND STRTRAN(STR(PrmEmp,3),' ','0') $ gr.empresas ;
+        AND IT.EMPRESA = PrmEmp ;
+     	AND IT.CODIGO = GR.CODIGO ;
+     	AND IT.TIPO = "SCA" ;
+        AND YEAR(IT.DATA) = YEAR(PrmDtFim);
+        AND MONTH(IT.DATA) <= MONTH(PrmDtFim) ;
+    ORDER BY GR.CODIGO;
+    GROUP BY GR.CODIGO;
+   	INTO TABLE  \TMP\SCA
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+FUNCTION ULUnion
+
+	*-------------------------------------------------------------------*
+	*-------------------------------------------------------------------*
+	SELECT  	;
+	  * ;
+      FROM SLD ;
+    UNION ;
+	SELECT  	;
+	  * ;
+      FROM QLA ;
+    UNION ;
+	SELECT  	;
+	  * ;
+      FROM SCA ;
+   	INTO TABLE  \TMP\TMPINVT
+    
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+FUNCTION ULSomaInvt
+	SELECT  	;
+	  EMPRESA, ;
+	  COD_ITEM,;
+	  SUM(SLD)           AS SLD, ;
+	  SUM(QLA)           AS QLA, ;
+ 	  SUM(SCA)           AS SCA, ;
+ 	  SUM(QLA-SCA)       AS SLD_N_FISCAL;
+    FROM TMPINVT ;
+    GROUP BY ;
+	  EMPRESA, ;
+	  COD_ITEM;
+   	INTO TABLE  \TMP\TMPINVT2
+
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+
+
+FUNCTION ULInvtFinal
+	SELECT  	;
+	  EMPRESA, ;
+	  COD_ITEM,;
+	  SLD, ;
+	  QLA, ;
+ 	  SCA, ;
+ 	  SLD_N_FISCAL,;
+ 	  SLD - SLD_N_FISCAL AS SLD_FISCAL;
+    FROM TMPINVT2 ;
+   	INTO TABLE  \TMP\QTD_INVT
+
+
+*---------------------------------------------------------------------*
+	GO TOP
+
+	
+RETURN
+
+*
+*	  SLD,;
+*	  QLA,;
+*	  SCA;
+*
+

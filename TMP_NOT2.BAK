@@ -1,0 +1,328 @@
+	SET DELE ON
+	SET TALK ON
+	SET ESCAPE ON
+	SET CENT ON
+	SET DATE GERMAN
+
+	set excl off
+
+	=COPYNOTA()
+	=COPYITEM()
+
+	=DELNOTA()
+	=DELITEM()
+
+	=CARREGA()
+
+RETURN
+
+*---------------------------------------*
+
+FUNCTION COPYNOTA
+	use x:\scgc\sia\nota
+	set order to tag nota
+
+	copy to x:\tmp\00000\NF_SIA for ;
+			empresa = 2 ;
+		and (;
+		  		nota = 3085688 ;
+			OR 	nota = 3085676 ;
+			OR 	nota = 3085680 ;
+			OR 	nota = 3085730 ;
+            )		
+*---------------------------------------*
+	use x:\scgc\ARG\nota
+	set order TO tag nota
+
+	copy to x:\tmp\00000\NF_ARG for ;
+			empresa = 8 ;
+		and (;
+		  		nota = 3055773 ;
+            )		
+		
+*---------------------------------------*
+	use x:\scgc\ABO\nota
+	set order TO tag nota
+
+	copy to x:\tmp\00000\NF_ABO for ;
+			empresa = 17 ;
+		and (;
+		  		nota = 3008568 ;
+			OR 	nota = 3008624 ;
+            )		
+		
+*---------------------------------------*
+	use x:\scgc\ANP\nota
+	set order TO tag nota
+
+	copy to x:\tmp\00000\NF_ANP for ;
+			empresa = 14 ;
+		and (;
+		  		nota = 3057853 ;
+			OR 	nota = 3057771 ;
+			OR 	nota = 3057478 ;
+			OR 	nota = 3057366 ;
+			OR 	nota = 3056965 ;
+			OR 	nota = 3057160 ;
+			OR 	nota = 3057808 ;
+			OR 	nota = 3057197 ;
+			OR 	nota = 3057938 ;
+			OR 	nota = 3056992 ;
+			OR 	nota = 3056991 ;
+			OR 	nota = 3056990 ;
+			OR 	nota = 3056989 ;
+			OR 	nota = 3057643 ;
+			OR 	nota = 3057959 ;
+			OR 	nota = 3057844 ;
+			OR 	nota = 3057001 ;
+			OR 	nota = 3057872 ;
+			OR 	nota = 3057747 ;
+			OR 	nota = 3057049 ;
+            )		
+
+
+
+	CLOSE DATABASE
+
+	USE  x:\tmp\00000\NF_SIA 
+	copy STRU TO x:\tmp\00000\NF_TOT
+
+	CLOSE DATABASE
+	USE  x:\tmp\00000\NF_TOT
+
+	APPEND FROM  x:\tmp\00000\NF_SIA 
+	APPEND FROM  x:\tmp\00000\NF_ANP 
+	APPEND FROM  x:\tmp\00000\NF_ABO
+	APPEND FROM  x:\tmp\00000\NF_ARG
+	
+
+
+RETURN(.T.)
+
+*---------------------------------------*
+*---------------------------------------*
+FUNCTION COPYITEM
+	use x:\scgc\sia\ITEMMOV
+	set order TO tag nota
+
+	copy to x:\tmp\00000\IT_SIA for ;
+			empresa = 2 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3085688 ;
+			OR 	nota = 3085676 ;
+			OR 	nota = 3085680 ;
+			OR 	nota = 3085730 ;
+            )		
+*---------------------------------------*
+	use x:\scgc\ARG\ITEMMOV
+	set order TO tag nota
+
+	copy to x:\tmp\00000\IT_ARG for ;
+			empresa = 8 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3055773 ;
+            )		
+		
+*---------------------------------------*
+	use x:\scgc\ABO\ITEMMOV
+	set order TO tag nota
+
+	copy to x:\tmp\00000\IT_ABO for ;
+			empresa = 17 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3008568 ;
+			OR 	nota = 3008624 ;
+            )		
+		
+*---------------------------------------*
+	use x:\scgc\ANP\ITEMMOV
+	set order TO tag nota
+
+	copy to x:\tmp\00000\IT_ANP for ;
+			empresa = 14 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3057853 ;
+			OR 	nota = 3057771 ;
+			OR 	nota = 3057478 ;
+			OR 	nota = 3057366 ;
+			OR 	nota = 3056965 ;
+			OR 	nota = 3057160 ;
+			OR 	nota = 3057808 ;
+			OR 	nota = 3057197 ;
+			OR 	nota = 3057938 ;
+			OR 	nota = 3056992 ;
+			OR 	nota = 3056991 ;
+			OR 	nota = 3056990 ;
+			OR 	nota = 3056989 ;
+			OR 	nota = 3057643 ;
+			OR 	nota = 3057959 ;
+			OR 	nota = 3057844 ;
+			OR 	nota = 3057001 ;
+			OR 	nota = 3057872 ;
+			OR 	nota = 3057747 ;
+			OR 	nota = 3057049 ;
+            )		
+
+
+
+	CLOSE DATABASE
+
+	USE  x:\tmp\00000\IT_SIA 
+	copy STRU TO  x:\tmp\00000\IT_TOT
+
+	CLOSE DATABASE
+	USE  x:\tmp\00000\IT_TOT
+
+	APPEND FROM  x:\tmp\00000\IT_SIA 
+	APPEND FROM  x:\tmp\00000\IT_ANP 
+	APPEND FROM  x:\tmp\00000\IT_ABO
+	APPEND FROM  x:\tmp\00000\IT_ARG
+
+
+
+RETURN(.T.)
+
+*---------------------------------------*
+*---------------------------------------*
+
+FUNCTION DELNOTA
+	use Q:\scgc\CENTRAL\nota
+	set order to tag nota
+
+	DELETE ALL FOR ;
+       ( ;
+			empresa = 2 ;
+		and (;
+		  		nota = 3085688 ;
+			OR 	nota = 3085676 ;
+			OR 	nota = 3085680 ;
+			OR 	nota = 3085730 ;
+            );
+       ) ;
+       OR;		
+       (;
+			empresa = 8 ;
+		and (;
+		  		nota = 3055773 ;
+            );
+       );
+       OR ;
+	   (;       
+			empresa = 17 ;
+		and (;
+		  		nota = 3008568 ;
+			OR 	nota = 3008624 ;
+            );
+       );		
+       OR ;
+      (;
+      			empresa = 14 ;
+		and (;
+		  		nota = 3057853 ;
+			OR 	nota = 3057771 ;
+			OR 	nota = 3057478 ;
+			OR 	nota = 3057366 ;
+			OR 	nota = 3056965 ;
+			OR 	nota = 3057160 ;
+			OR 	nota = 3057808 ;
+			OR 	nota = 3057197 ;
+			OR 	nota = 3057938 ;
+			OR 	nota = 3056992 ;
+			OR 	nota = 3056991 ;
+			OR 	nota = 3056990 ;
+			OR 	nota = 3056989 ;
+			OR 	nota = 3057643 ;
+			OR 	nota = 3057959 ;
+			OR 	nota = 3057844 ;
+			OR 	nota = 3057001 ;
+			OR 	nota = 3057872 ;
+			OR 	nota = 3057747 ;
+			OR 	nota = 3057049 ;
+            );
+        )
+        		
+RETURN(.T.)
+		
+FUNCTION DELITEM
+	use Q:\scgc\CENTRAL\ITEMMOV
+	set order to tag nota
+
+	DELETE ALL FOR ;
+       ( ;
+			empresa = 2 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3085688 ;
+			OR 	nota = 3085676 ;
+			OR 	nota = 3085680 ;
+			OR 	nota = 3085730 ;
+            );
+       ) ;
+       OR;		
+       (;
+			empresa = 8 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3055773 ;
+            );
+       );
+       OR ;
+	   (;       
+			empresa = 17 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3008568 ;
+			OR 	nota = 3008624 ;
+            );
+       );		
+       OR ;
+      (;
+      			empresa = 14 ;
+		AND	LEFT(OPERACAO,1) = "S" ;
+		and (;
+		  		nota = 3057853 ;
+			OR 	nota = 3057771 ;
+			OR 	nota = 3057478 ;
+			OR 	nota = 3057366 ;
+			OR 	nota = 3056965 ;
+			OR 	nota = 3057160 ;
+			OR 	nota = 3057808 ;
+			OR 	nota = 3057197 ;
+			OR 	nota = 3057938 ;
+			OR 	nota = 3056992 ;
+			OR 	nota = 3056991 ;
+			OR 	nota = 3056990 ;
+			OR 	nota = 3056989 ;
+			OR 	nota = 3057643 ;
+			OR 	nota = 3057959 ;
+			OR 	nota = 3057844 ;
+			OR 	nota = 3057001 ;
+			OR 	nota = 3057872 ;
+			OR 	nota = 3057747 ;
+			OR 	nota = 3057049 ;
+            );
+        )
+        		
+RETURN(.T.)
+		
+				
+FUNCTION CARREGA
+
+	CLOSE DATABASE
+
+	USE  Q:\SCGC\CENTRAL\NOTA
+
+	APPEND FROM  x:\tmp\00000\NF_TOT
+
+
+	USE  Q:\SCGC\CENTRAL\ITEMMOV
+
+	APPEND FROM  x:\tmp\00000\IT_TOT
+
+
+
+RETURN(.T.)				
