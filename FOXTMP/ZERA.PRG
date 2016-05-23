@@ -1,0 +1,11 @@
+PARAMETERS PrmARQ
+
+LSARQ = "X:\PROJETOS\FOX\M\FOX\"+PrmArq
+
+
+
+
+USE &LSARQ  EXCL
+
+zap
+pack

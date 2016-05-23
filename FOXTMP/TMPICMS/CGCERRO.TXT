@@ -1,0 +1,351 @@
+
+Record#         CLIENTE NOME                                                        
+      1               1 49JOSE  LIMPIO PEREISA                         QN           
+      2               2 75A.P. DRACENA LTDA                              QN    NNNNN
+      3              24 EURLI CHRISSOSTOMO DA SILVA                                 
+      4              62 ROGERIO DE MENDONCA LIMA                                    
+      5             898 JULIO PAULINO DA COSTA                                      
+      6            3333 MARIA                                                       
+    342              11 72FAZENDA MARANDREIA                                        
+    343 9            11 00ADELINO FRANCISCO ITACARAMBY                              
+    344 0            11 34OSWALDO ALVELINOOS SANTOS                                 
+    720              11 30IVAN COSTA CARVALHO                                       
+   1095              11 68PAULO AFONSO COSTA                                        
+   1096              11 97MARCOS AVELINO MARTINS                                    
+   6737  25111388600010 GOIAS FERRAMENTAS LTDA                                      
+   6740    370273801000 TECPAR TECNOL PAV. LTDA                                     
+   6746      6298807153 REGINALDO DE SOUZA RAMOS                                    
+   6748    219216736149 EURIPEDES BALSANULFO DA SILVA                               
+  18367            4529 BANCO DO BRASIL                                             
+  22170        49694147 SINVAL BOAVENTURA                                           
+  22173       147605046 JOSE ALAIDES PEREIRA                                        
+  22226       829086191 FRANCISCO FEITOSA DE OLIVEIRA                               
+  22231       849526153 WILSON SOUZA LOPES                                          
+  22443      5169107120 LIMIRO JOSE FIGUEIREDO                                      
+  22535      7665108920 NELSON BARP                                                 
+  22697     13146530172 SEBASTIAO VIEIRA SOBRINHO                                   
+  22915     21998141153 BENEDITO DA SILVA MOREIRA                                   
+  23084     33662170853 ADILSON FERRO                                               
+  23273     56548412233 ADECIL ALVES DA CRUZ                                        
+  23463   1567800000115 TREVO COML. DE FERRAGENS                                    
+  23632  33046772000220 DAICO DESENV.AGRICOLA IND.E COM. LTDA                       
+  25826             129 OLIZIO CLAUDINO DA SILVA                                    
+  26316       226309868 CELSO ROSA NETO                                             
+  28382     41829168187 VANDERLEI R. DOS SANTOS                                     
+  28554     15011312134 JOSE IVAN DE CARVALHO                                       
+  28795      1416765563 LUIZ ALMEIDA REZENDE                                        
+  29956  69033360000158 W. G COM. DE AREIA E CASCALHO LTDA                          
+  34315       890741104 ORDEIR MOREIRA EMIDIO                                       
+  35604  20502454000196 COOP.DE RECICLAGEM DE LIXO                                  
+  35697   2068962000135 LUXO TURISMO AG.DE VIAGEM DE TUR. LTDA                      
+  35698      3987797853 ELSON MANN                                                  
+  37817   2735773000150 ITACUAN ENG. COM. MINERIOS LTDA                             
+  38434           13503 ANTONIO ANSELMO DE FREITAS                                  
+  38435             582 CLAUDIO ANTONIO SOMENZI                                     
+  38436           31953 JESSE PIRES CAETANO                                         
+  38437             746 MAURO ANTONIO BONOME                                        
+  38438             450 MIGUEL MARTINS VILA VERDE                                   
+  38439               3 NATAL VENANCIO DE CAMARGO                                   
+  38440               4 RENATO BATISTA DE MORGADO                                   
+  38441           34081 SEBASTIAO MARCILON DE ARAUJO                                
+  38442           27562 WILSON SPINDOLA JUNIOR                                      
+  38443     28516320001 AGROAVILA AGRICULTURA E PECUARIA LTDA                       
+  38451      2868672118 MARIA FRANCISCA DE BARROS                                   
+  38452             495 04JESUSONJEIRIDA SILVA                                   2I 
+  38453             210 DIISALBER   LVA   SUO ALV                                   
+  38454     49102058694 4 IV NOBINGSTDONJEIROS                                      
+  38455     49754578594 04JRROOMES AR SILVA                                         
+  38456     21076291736 04JOV  TO   DERAATIAR                                       
+  38457       492463160 20JOSE ELNRROORREIRA DA                                     
+  38458              49 53WILS NORODRIGU LTPOR            N N N N N            4    
+  38459     49241541453 GEJOSE DEROLIVRA DACARDOSB FILH           N N N N N N N N N 
+  38460        49204191 34MARGA JOSE DERSOUZ  SMARA                     BR       2I 
+  38461          492450 87MILT NOALV LTPEIRA DA SICUNHA                             
+  38462     49400309128 15NELS NOFSTOCIS LEDO SMARA                     BR       2I 
+  38463       494403715 59ORLABDO VICTO E NO  NIO GUURIZAN           N N N N N N N N
+  38464     49448405707 82PAULO ROBER   DERABRAUTCHAGA                 ARN N N N N N
+  38465     49423631201 14PRTO ICTA SILVA   NEI                                   2I
+  38467     49243939602 80SABD DACRISTGA  GRIPPE MOTTA                              
+  38468      4950274885 20LVA IO MENEZ LTBORG LT                              4     
+  38470     49443404431 15VALMOR ERGAN                                  BR       2I 
+  38471              21   CONSTRUSOLO CONST.E TOPOGRAF   LTDA                     AV
+  38472   2329183770199 10ASIDIV O D. E COM.ALTDA                     AV     ARN N N
+  38473         2370947 17COMERCIA  AGR.4PARCK VERDERLTDA                     AV    
+  38474           22489 62COMERCIA  AGRIC LA KI FRUTT                 AV     ARN N N
+  38475   2315464845199 00SJ FEDESA  VIGIL E TR DERVALORESALTDA                     
+  38476      2725929000 86CONSTRUTUSA TENA 04TEC.ENG.APL.SERV.                    AV
+  38477     21724911100 04COOPESATIVANCTO SA  D LTPROD.RUSAISAD M                  A
+  38478   2494427980199 21COPANOMPATPROD. DERNOMPEZA UTIL.LTDA                     A
+  38479   2493392915199 47EMPRESA JUIZ DERFOSI S.GER.LTD              AV     ARN N N
+  38480   2496092635199 00ENNJM ENGENHAR   LTDA                     AV             A
+  38481             248 84MAR   DERFATIMA BEZERSI LEI                    BR         
+  38482   2875745880199 75GEYER ESTANQUEAMTO   LTDA                     AV          
+  38483        24853516 06GRUPO OK CONSTRUTOSI E INNJRPOSICA  S/A                   
+  38484   2608693360033 02HOLDERCIM.ASILIA S/A                                      
+  38485   2494973465199 00JOSE DERSOUZA FRABCA                                      
+  38487   2459947465199 04NATIVANENGENHAR   S/A                                     
+  38488   2380315550199 73NOV  LAR MUDABCASAENTRANSPOR  SALTDA                     A
+  38489   2330985265199 05NOV  RI  PAPEISANJM.E IND.ALTDA                          A
+  38490       297428731 56PROSEGUR.ASILIA S/A -NTRANSP.DERVALORES                 AV
+  38491   2430351465141 72PROTEGE-PROT.ENTRANS.DERVALOR.S/CALTDA                    
+  38492   2335142825199 02ROVIARI  ASILIA   LTDA                     AV             
+  38493   2380173145105 20SOARES E PEREIS  LTDA                     AV             2
+  38494    217216052001 93TORCNTERSIP.OASIS ROD.ERCONST.            AV             2
+  38495   2335035415199 91URBANIZAANJM ERCONSTRUCO SALTDA                     AVAVAV
+  38496       237887866 76AGR  INDUSTR   CARVALH           N                      QN
+  38497        27261150 70AGR CEN IND. ERCOM.NRACOES CEREAIS LTD                  QN
+  38498     22491352000 75SMAFF SJNST. ENINCORP. DERIMOVEIS LTD                  QN 
+  38499             324 87CLOVIS  NGELIM DERARAUJ  LOP S JUNIOR       AVV           
+  38500      3224922833 78IMAXRIMPERMEABIA ZACOES LTD        AVV                 QN 
+  38501              32 43LOJA4D S TINT S COMERCIO ENINDUST LTD .     DF         0  
+  38502             419 87R S NGELA GOMES SOT           N                           
+  38503     42830544780 01AD MI S/A MADEISAS                                      QN
+  38504      4253867727 37AGRIC LA E FLORESTA  SA  FELIX LTD        AVV             
+  38505  42247690020001 08AGROP CUAR   MACRIS LTD        AVV                      QN
+  38506              42 22V  CA  FENIX TRANSPORTES E TURISM  LTD .                  
+  38507      4236875151 30LIL -COMERCIAL IND.IMP.EXP. VEICULOS LTD        AVV       
+  38508              41 00WAGNER MEISA ALVES      N                                 
+  38509  42150230220001 91PREFEITURA MUNICIPAL DE C N R N                           
+  38510  42159434340001 00PREFEITURA MUNICIPAL DE RIBEISAOZINH           N          
+  38511      4137446341 03DISTRIB. DE BEBIDAS VALE D  XINGU LTD .                   
+  38512  42973930862001 09BOM1JARDIM PRODUT S ALIMENTICIOS LTD .                    
+  38513  42369563080001 26C SCALHEISA RI  CORRENTE LTD .                    Q       
+  38514    422499106900 92INSTITUT  EDUCACIONAL DOVCENTR -OEST           AVV     00 
+  38515  42013956062002 17J.J. COM. DE CEREAIS E PROD. AGRIC. LTD .                 
+  38516  42502460242001 01LIVRAMENT  AGRO INDUSTRIA  S/ .                    Q      
+  38517  42265366562001 17LODOVE  FRIGO - M           AVV     00 QN                 
+  38518         4251400 27PECUAR   DAMHA S/ .                    Q       Q          
+  38519  42265757532001 19TAVEISA MATERIAIS P/ CONSTRUCA  LTD .                    Q
+  38520  42846961780001 09TRANSPORTADOSA MANCHEST R LTD .                    Q      
+  38521              51 04JANI  ALVES PINTO                                   V V   
+  38522  52373282180002 60AGROPECUARIA PARAISO D S PALMEISAS LTDA                Q  
+  38523  52267125130001 98ALUTEC IND. E COM. DE ALUMINIOS LTDA                Q     
+  38524              52 10TSANSMEISELES TSANSP. FRIGORIF LTDA                Q     Q
+  38525  52378682290199 86DIVINO SILV NO DOS SANTOS  D                              
+  38526      5273752776 31ACC PECAS E SERVIC S LTDA                Q             Q  
+  38527    523688558000 99EWEC CONSTRUCOES LTDA                Q     QN      D   N  
+  38528    522513182200 32PNEUS  RAGUAIA LTDA.                Q     QN      D   N   
+  38529     52235154410 86BRASIF0S/A EXP. E IMP. LTDA                Q     QN     N 
+  38530      5225118886 01CENTS  COUROS INHUM S LTDA                Q     QN     N  
+  38531   5217186469014 90EGESA ENG. S/                                          QN 
+  38532   5288446869000 05HELIOS COLETIVOS E CARGAS LTDA             Q     QN     N 
+  38533    522485210500 37HERMANO DE CARVALH           N                            
+  38534      5274116658 08JVC DIST. DE BEBIDAS LTDA                              QN 
+  38535      5229689346 20LATICINIOS OSCAR SALGADO LTDA                Q     QN     
+  38536        52332938 85MADEISEISA ANHANGUERA LTDA                              QN
+  38537   5237264769000 27MADEISEISA NEROP LIS LTDA                              QN 
+  38538     52264704170 43MANDALA TSANSPORTES DE CARGAS LTDA             Q     QN   
+  38539      5237596847 17NOVA OPCAO COM. DE ARMARINHOS      QN      D   N  N      Q
+  38540      5251086486 44REI DA FERRAGEM COM. E REP. LTDA                Q     QN  
+  38541  52332952130002 28TUIUTI S/A IND. E COMERCIO           Q     QN          Q  
+  38542              81 68OSVALDO MARI NO DA SILVA                Q     QN     N    
+  38543              82 94RUBENS G NCALVES AGUIAR                                   
+  38544  82174287310053 66PS SEGUR BRASIL S/ANARAGUAIN          Q     Q    D   NN   
+  38545       223953943 02COOP. AGROP. DO VALE DO PARACATU LTDA Q QN      D   N  N  
+  38546             233 20DAICO DESENV.AGRICOLA IND.E COM.QLTDA Q QN      D   N  N  
+  38547   2264071150001 27DIST.DE FRUT S E VERDURAS DOURADO LTDA Q QN      D   N  N 
+  38548       237514064 10IND. E COM.QDE LAT. VALE DO ARAGUAIA LT                   
+  38549        23696327 45IRMAOS CANEPELLE AUTO POSTO LTDA Q QN      D   N  N       
+  38550         2268364 69MARCIOS TRANSPOSTES LTDA Q QN      D   N  N         D   N 
+  38551       225031451 17PETS  SAMOS DERIVADO DE PETS LEO LTDA Q QN      D   N  N  
+  38552   2333459350001 69TRANS CABECA                  D   N  N         D   N  N   
+  38553        23710597 61TRANSBOFIM MAT. CONSTRUCAO LTDA Q QN      D   N  N        
+  38554       173601254 39ANA MARCOLINA SOUZA                     N         QN   QN 
+  38555        12492717 84 RDOSIA REVESTIMENTO LTDA          D   N  N        D   N  
+  38556   1378840380001 84CARLOS WAGNER RIBEIRO E SILVA                             
+  38557   1333548460199 89DIVINO EVARISTO Q. DA SILVA                               
+  38558        12663182 75GILBERTO ALVES CORDEIRO                        QN   QN    
+  38559   1577978390002 09IKEDA TRASNP. E DEST. LTDA                             QN 
+  38560   1869214430001 82IVETE FROHLICH-ME                             Q    QN     
+  38561        12468967 70JOSE CARLOS BORGES       Q    QN                          
+  38562   1368938160001 39LAZARO C. DEQMAURO FILHO         QN NNNNN N NNNNNN        
+  38563   1269743780001 80LUBRIFILTROS REP. PECAS E LUBRIF.    QN                   
+  38564       137656295 69MILTON RODRIGUES DOS REIS    QN NNNNN NN    QN   NNNNN Q Q
+  38565      1160141770 87MURILO PEDRO VIEIRA DA SILVA       QN        N  NN QN NNNN
+  38566       138154506 28SOUZA FERREIRA       QN      QN    NNNNNNNNNNN            
+  38567       138030169 67SUPERMERCADO VAREJAO OBA LTDA       QN      QN    NNNNNNNN
+  38568   1351967650001 23TRANSUL TRANSPORTES LTDA       QN      QN    NNNNNNNNNN   
+  38569        16903336 58W. G COM. DE AREIA E CASCALHO LTDA       QN      QN    NNN
+  38570   2374023850002 04ADUBOS MOEMA IND. E COM. LTDA                             
+  38571   2380766590199 02AFONSO DIST. DE FRUT S E VERDURAS LTDA                    
+  38572   2187169590199 27AGRIFLORA EMP. AGR. E FLORESTAL LTDA                      
+  38574   2451655941991 09AGROPECUARIA JUBRAN S/A                                   
+  38575   2267251190199 15AGROPECUARIA NOVA ERA LTDA.                     QN    NNNN
+  38576   2373282180199 80AGROPECUARIA PARAISO DAS PALMEIRAS LTDA                   
+  38577   2372585070999 89AGROPECUARIA PIRUCAIA LTDA                              QN
+  38578   2248737290199 74AGROPECUARIA RIO NORTE                                    
+  38579        28973673 40AGROPECUARIA SEIVAL LTDA                                  
+  38580         2335491 44ALMEIDA E MONTEIRO LTDA                              QN   
+  38581       233303553 72ALVES SILVA TRANSP. LTDA                              QN  
+  38582       236906550 11AMORIMNMAQUINAS AGRICOLAS                 QN          QN  
+  38583   2974943070999 57ANHANGUERA PAINES PROPAGANDA LTDA                         
+  38584      2332498550  1APAF ASS. DE PEQ. AGRIC.                     QN    NNNNNNN
+  38585   2248964080199 23ARROZ CRISTAL IND. ENCOM. LTDA                            
+  38586       236975480 53ASSOCIACAO DOS PEQ. PROD. REG.NBARRINHA                   
+  38587       233296557 13ATACADAO RIO VERMELHO LTDA                                
+  38588       225099227 67AUTO POSTONCARDOSO MELO LTDA                              
+  38589   2869761720199 10AUTO POSTONTATIANA LTDA                              QN   
+  38590       237513843 00AUTO POSTONTIGRAO LTDA                              QN    
+  38591       224886269 85AUTO SOCORRO BRASILIA LTDA                                
+  38592       290968884 65AVELINO ALLIATI DIST. DE BEB. E TRANSP.                   
+  38593       248775266 32BANDAG DO BRASIL LTDA                              QN     
+  38594      2238084380 97C.C.M. CONSTRUTORA CENTRO MINAS LTDA                      
+  38595        28684164 40C.C.V. MAT. P/ CONST. LTDA                                
+  38596       224814469 22C.R.L CONSTRUTORA LTDA                              QN    
+  38597      2595598150 39CABRUANA S/A AGROP.EMPREENDIMENTOS                        
+  38598       237873734 76CAPITAL CONCESSIONARIA DE LIMPEZA LTDA                    
+  38599         2796559 50CECRISA REVESTIMENTOS CERMICONS.AN      QN    QN    QN    
+  38600       233327834 65CENTRAL DE SERV. E LOC. DEM. OBRAS LTDA                   
+  38601       215080948 09CERAMICA A.B.C LTDA                              QN       
+  38602       237889193 93CERAMICA PORTOBELO LTDA                                   
+  38603          236869 86CHARLLES TURISMO E TRANSPORTES LTDA                       
+  38604       225022823 49COELHO E AMARAL LTDA                              QN      
+  38605   2528530250003 01COMEC. DE FRUT S MENDES IMP. E EXP. LTDA                  
+  38606       226437319 72COMERCIAL ATACADISTA UNIAO LTDA                           
+  38607       238147757 85COMERCIAL DE ALIMENTOS RODRIGUES                          
+  38608       226467918 18COMERCIAL DE BEBID S MENDES LTDA                          
+  38609      2267221160 28COMERCIAL DE BEBID S PETROPOLIS                           
+  38610             238 84COMERCIAL OK BENFICA DE PNEUS LTDA                        
+  38611       226441642 10COMERCIAL PANTANAL DE FRUT S LTDA                         
+  38612         2836688 98COMINAS MINERACAOQCONVENTOS S/A                           
+  38613         2735729 21CONDIBRA DIST. DE BEBID S LTDA                         QN 
+  38614   2395464840002 83CONFEDERAL VIGILANCIA E TRANSP. VALORES                   
+  38615   2248644490001 66CONFLORA CONST. PLANJ. ACESS. FLOREST.                    
+  38616       237373008 03CONSTRUTORA COLORADO LTDA                                 
+  38617       236991818 60CONSTRUTORA SOUZA PINTO LTDA                              
+  38618       226944058 87CONSTRUXEPA MAD. MATS. CONSTRUCAO                         
+  38619       238643136 92COOP. AGRICOLA REGIONAL PIRATINGA LTDA                    
+  38620              22 29TRANSPORTADORA E INSTALADORA ALVES LTDA                   
+  38621       237039922 12COPACEN-COOP.PROD.R. DO PLANALTONCENTRAL                  
+  38622       233046772 85DAICO DESENV. AG. IND. COMERCIO S/A                       
+  38623       237098522 88DHS MATERIAL DE CONSTRUCAO LTDA                         QN
+  38624   2269161310001 80DIMAL DIST.MATERIAIS P/CONSTRUCOES LTDA                   
+  38625       238023826 49DIST. DE FRUTAS ALTA PAULISTA LTDA                        
+  38626        23716330 00DIST. DE LATICINIOS REIS LTDA.          QN                
+  38627   2250368640001 94DISTRIBUIDORA DE BEBIDAS TREVO LTDA                       
+  38628   2267357380001 90DISTRIBUIDORA DE FRUTAS BATISTA                           
+  38629   2372727540001 00DIVINO JOSE DA SILVA                         QN           
+  38630      2153619670 76DRESCH PNEUS                                              
+  38631   2171864610027 32EGESA ENGENHARIA S/A                         QN           
+  38632   2367667800001 22ELEV. SERV.MANT.DE ELEV. LTDA                         QN  
+  38633      2416596650 50EXPRESSO ARAGUARI ENC. E CARGAS LTDA                      
+  38634       233031055 18FAZENDA AGROPECUARIA XAVANTINA LTDA                       
+  38635      2372728380 44FAZENDAS REUNIDAS SERRA DOURADA LTDA                      
+  38636       237121912 50FERRAGIST  CURITIBA LTDA                         Q        
+  38637            2380 23FRULEVER CIAL DE FRUTAS E VERDURAS LTDA                   
+  38638   2966020080002 88GOESP TRANSP. LTDA                         Q           QN 
+  38639      2368748570 88GRANJA JOSIDITH                                           
+  38640   2974730290001 22HIDROPOS COM. DE PROD. AGROP. LTDA.           Q           
+  38641       226728865 62ICEMA IND.DE ESQUADRI S MET.ANDRADE LT.          Q        
+  38642   2610770790001 43INDUSTRIASNJOAONMAGGION S/A                               
+  38643   2371369590001 69ITATICO COMERCIO DE ALIMENTOS LTDA                        
+  38644      2726300070 06J. ALBERTO TRANSP.DE CARG S E PASS LTDA                   
+  38645   2854862490001 01J.M OLIVEIRA                                              
+  38646      2207302480 15JACAREZINHO TRANSPORTES LTDA                              
+  38647   2376051690001 85JAVAES CONST. MONTAGEM LTDA                               
+  38648       221092584 35JL MOVEIS DE ESTILO LTDA                                  
+  38649   2538378370003 18LANGUIRO REP. E COMERCIO LTDA                             
+  38650   2725931710001 82LEDAMAR TURISMO LTDA                                      
+  38651       237085792 54LOMAQ LOC. DE MAQ. LTDA                                   
+  38652   2375945380001 81M.E LOCADORA                                              
+  38653   2725732490001 05M.P TRANSPORTADORA LTDA                                   
+  38654   2373633480001 53M.R PNEUS EXP. IMP. LTDA                                  
+  38655   2725791880001 85MAX FLORE LTDA                                            
+  38656   2251150070001 80MAXIM'S INDUST. E COM. DE MOVEIS LTDA                     
+  38657   2267356700001 40MEGA WATT CONST. E ELET. LTDA                             
+  38658   2251339840001 00METRAFORT TERRAPL. LTDA                                   
+  38660   2577554480002 68MOA INTERNACIONAL         Q                               
+  38661   2269128240001 21MOREIRA CARGAS LTDA                                       
+  38662             225 70N.C MOVEIS LTDA                                           
+  38663   2335145710001 01N.E ENGENHARIA E TRANSP.  Q                               
+  38664        22002766 73NOMUROBRAS ESTABELECIMENTO AGROPASTORIL         Q         
+  38665       237831492 77OURO E PRATA IND.E COM.DE PROD.LAC.LTDA                   
+  38666   2380666840001 05PALODORO MAT. DE CONSTRUCOES LTDA                         
+  38667   2335550880001 04PAMPA ENGENHARIA LTDA                                     
+  38668   2376219330001 95PARAUNA IND. E COM. DE LATICINIOS LTDA                    
+  38669   2153504730001 96PARREIRA E QUEIROZ LTDA                                   
+  38670       236858959 00PAVIENGE ENGENHARIA LTDA                                  
+  38671   2735725540001 37PAVIMAX CONST. LTDA                                       
+  38672     23708893700 70PEDRITA TRANSP. E TERRAPLANAGEM LTDA                      
+  38674   2612349850021 58PNEUAC COMERCIAL ENIMPORTADORA LTDA                       
+  38675   2250555340001 46POSSE SUPER POSTO              QNN                        
+  38676   2210058670001 00POSTO APARECIDA DE GOI S LTDA                             
+  38677   2219415540001 56POTENCIA  SERV. GUIND. LTDA                               
+  38678   2216138400001 19PREFEITURA MUNICIPAL DE ABADIA DE GOI S                   
+  38680   2210828030001 03PRS TERRAPLENAGEM E PAVIMENTACAO LTDA                     
+  38681      2269339290 67QUEIROZ E ANDRADE LTDA                                    
+  38682   2376613030001 65RAPIDO RIO CLARO LTDA                                     
+  38683       226435370 45RAPIDO TRASNIL TRANSPORTES  LTDA                          
+  38684   2212429410001 02RCJ CONSTRUTORA INCORPORADORA                             
+  38685   2216388350001 34REALDIESEL COM. E TRANSP. DE PETROLEO           Q         
+  38686   2250029730001 90REBRAC REN. DE PNEUS                                      
+  38687         2381544 46RECAPAGEM RODOARTE LTDA                                   
+  38688   2329059840001 81REGULADORA DE MOTORES DI S LTDA                           
+  38689       237325560 26REPEL COMP. AUTOMOTIVOS LTDA                              
+  38690       221401470 20REYDROG S COMERCIO LTDA                                   
+  38691             290 87RODIAL AGROFLORESTAL LTDA                                 
+  38692   2849364260199 41RODO MAR VEICULOS LTDA                                    
+  38693   2220340340001 22RODOVIARIO MENINO LTDA                                    
+  38694   2264859850001 11ROLDAO ENGENHARIA LTDA.                                   
+  38695      2214954490 30S.S DESMATAMENTO LTDA                                     
+  38696      2212735490 12SAMEDH ASSIT. MED. HOSPITALAR LTDA                        
+  38697   2867852680001 00SANTA CRUZ ENCOMEND S E CARG S LTDA                       
+  38698   2210343960199 50SAO GERALDO MAT. CONSTRUCOES LTDA                         
+  38699   2778573240001 75SBA ABASTECEDORA E FRETES RODOVIARIOS LT                  
+  38700   2376087670001 08SEC SERV. DE ENG. E CONST. LTDA                           
+  38701   2950622430001 21SEMEC SERV. DE MOTOMEC. E CONST. LTDA                     
+  38702       225025671 20SERRARIA NOVA CONCEICAO LTDA                              
+  38703      2177986790 09SERVBOM DIST.PROD.ALIMENTICIOS LTDA                       
+  38704   2215444080001 97SIC TRANSPORTES E REP. LTDA                               
+  38705      2370463640 12SKYLIGHT PUBLICIDADE MARK.                                
+  38707        27260910 20SOLUCAO EMBALAGENS LTDA                                   
+  38708       221008713 09STK CINE FOTO LTDA                                        
+  38709   2849576460009 51SULBRAZ TRANSPORTES LTDA                                  
+  38710   2370578580001 00SUPERMAIA SUPERMERCADO LTDA                               
+  38711   2376299950001 64SUPERMERCADO PRO-BRASIL LTDA                              
+  38712   2236152260009 95TAGUABOX COM. VIDROS IMP. EXP.                            
+  38713       237365657 62TEMPER VIDROS E CRISTAIS TEMPERADOS LTDA                  
+  38714       237176781 80TEMPERVIDROS BSB LTDA                                     
+  38715      2221901340 48TRANSCAM ESC. TERREPLANAGEM LTDA                          
+  38717       283915827 52TRANSJAU-COM. E TRANSP JAU LTDA                           
+  38718       222657386 34TRANSLET LOCACAO DE EQUIP. E TERRPL. LTD                  
+  38719   2334527800009 60TRANSPORTA TRANSP. DE CARGAS LTDA                         
+  38720       222599416 01TRANSPORTADORA BANDEIRANTES LTDA                          
+  38721   2233000010001 40TRANSPORTADORA COLPO LTDA                                 
+  38722   2725905810001 70TRANSPORTADORA FAZA LTDA                                  
+  38723      2332733840 75TRANSPORTADORA IPANEMA LTDA.                              
+  38724       222791143 94TRANSPORTADORA VILELA LTDA                                
+  38725        27253580 18TRANSPORTES CERREDA E CEREDA LTDA                         
+  38726   2248251760001 40TRANSPORTES COLETIVO UNIAO LTDA                           
+  38727   2229801550003 36TRANSPRESS TRANSP. EXPRESSO LTDA                          
+  38728   2268814090001 58TRIANON ENGENHARIA E CONSTRUCOES LTDA                     
+  38729   2229021950003 52TROPICAL PNEUS LTDA                                       
+  38730   2735441810003 52UNIPNEUS COMERCIAL DE PNEUS RECAPAGEM    QN               
+  38731   2248409690001 39V.P.M VIDROS PLANOS E MOVEIS LTDA                         
+  38732   2376350260001 16VALMAR IND. E COM. GEN. ALIM. LTDA                        
+  38733     22489368700 08VOETUIR CARGAS E ENCOMENDAS LTDA                          
+  38734       286876455 90WASHINGTON ARANTES E CIA LTDA                             
+  38735       215023898 90PREFEITURA MUNICIPAL DE AGUA BOA                          
+  38736       237420718 47PREFEITURA MUNICIPAL DE BRASILANDIA                       
+  38737       236862621 21PREFEITURA MUNICIPAL DE CIDADE OCIDENTAL    Q    Q        
+  38738       225086604 23PREFEITURA MUNICIPAL DE PEQUIZEIRO             Q          
+  38739            2251 05PREFEITURA MUNICIPAL SANTA FE DE GOI S                    
+  38740     23746531700 03PREFEITURA MUNICIPAL SAO JOSE DO XINGU                    
+  38741       124914871 89TERRA NOVA REMOCAO DE TERRAS LTDA                         
+  38742       237588415 19MINERACAO PIRENEUS LTDA                                   
+  38743     23355445200 74TIT NIO GOI S IND. E COM. LTDA                            
+  38744      2372898990 14TORNEADORA OGUIMAR JOSE VICENTE LTDA                      
+  38745   2731494030002 51TRANS-REGIONAL TRANSPORTES LTDA                           
+  38747      2150993680 70BARRATTUR TRANSPORTES E TURISMO LTDA                      
+  38748      2378781620 37BRITENGE BRITAGEM E CONSTRUCOES LTDA                      
+  38749      2266309880 66COMERCIAL STA PAUL  MAT. P/ CONST. LTDA                   
+  38750   2605105830059 49RAPIDO 900 TRANSP.RODOV.LTDA                              
+  38751      2424361390 22CONST.TRANSMILHA TERRAP.PAV.TRANSP.LTDA                   
+  38752   2897239770015 46TONIOLO BUSNELLO S/A                                      
+  39631       704095115 CARLOS ALBERTO GUIMARAES                                    
+  39880     54913656168 LEDIR JOSE PIRES                                            
+  40237     29081610156 RONALDO JOSE DE MELO                                        
+  42043   3710014000368 ATS TECNOL. E SERV. LTDA                                    
+  42473      4635821491 ALCINDO FERREIRA DE LIMA                                    
+  43197     12512773104 HELIO BORGES                                                
+  43945     14107992191 ANTONIO FERREIRA DOS SANTOS                                 

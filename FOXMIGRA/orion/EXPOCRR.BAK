@@ -1,0 +1,52 @@
+SET DELE ON
+SET EXCL OFF
+CLOSE DATA
+
+use x:\scgc\comum\banco
+sele 0
+use x:\scgc\comum\tab002
+
+
+   LCCBR_PK = -1
+
+SELECT  ;
+    FCLCCBR_PK()+LCCBR_PK      AS OCRR_PK,;
+    CHRTRAN(STR(BC.BANCO,3)," ","0") AS NRO_BANCO,;
+    "Retorno"     AS  OCRR_TIPO,;
+    TB.CODIGO     AS  OCRR_CODG,;
+    TB.DESCRICAO,;
+    ""            AS COD_ACAO;
+FROM ;
+      x:\scgc\comum\tab002 TB ,;
+      x:\scgc\comum\banco  BC ;
+WHERE ;
+      TB.TABELA = "T"+LEFT(STR(BC.BANCO,3),1)+CHR(VAL(RIGHT(STR(BC.BANCO,3),2)));
+UNION ;
+SELECT  ;
+    FCLCCBR_PK()+LCCBR_PK      AS OCRR_PK,;
+    CHRTRAN(STR(BC.BANCO,3)," ","0") AS NRO_BANCO,;
+    "Remessa"     AS  OCRR_TIPO,;
+    TB.CODIGO     AS  OCRR_CODG,;
+    TB.DESCRICAO,;
+    ""            AS COD_ACAO;
+FROM ;
+      x:\scgc\comum\tab002 TB ,;
+      x:\scgc\comum\banco  BC ;
+WHERE ;
+      TB.TABELA = "R"+LEFT(STR(BC.BANCO,3),1)+CHR(VAL(RIGHT(STR(BC.BANCO,3),2)));
+INTO TABLE X:\PRODUCAO\OCRR ;
+  ORDER BY ;
+BC.BANCO,TB.CODIGO
+
+
+
+RETURN
+
+
+FUNCTION FCLCCBR_PK
+
+     LCCBR_PK = LCCBR_PK + 1
+
+RETURN(0)
+
+

@@ -1,0 +1,23 @@
+	SELECT GRUPO.CODIGO ,;
+		IMgiroTendenciaLJ(1,GRUPO.CODIGO, DATE()-100,DATE()) AS GRO_GYN, ;
+		IMGetSaldo(1,GRUPO.Codigo, DATE())  AS SLD_GYN, ;
+		IMgiroTendenciaLJ(2,GRUPO.CODIGO, DATE()-100,DATE()) AS GRO_SIA, ;
+		IMGetSaldo(2,GRUPO.Codigo, DATE())   AS SLD_SIA, ;
+		IMgiroTendenciaLJ(3,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_W3, ;
+		IMGetSaldo(3,GRUPO.Codigo, DATE())   AS SLD_W3, ;
+		IMgiroTendenciaLJ(4,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_BGS, ;
+		IMGetSaldo(4,GRUPO.Codigo, DATE())   AS SLD_BGS, ;
+		IMgiroTendenciaLJ(5,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_IPG, ;
+		IMGetSaldo(5,GRUPO.Codigo, DATE())   AS SLD_IPG, ;
+		IMgiroTendenciaLJ(6,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_CGB, ;
+		IMGetSaldo(6,GRUPO.Codigo, DATE())   AS SLD_CGB, ;
+		IMgiroTendenciaLJ(8,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_ARG, ;
+		IMGetSaldo(8,GRUPO.Codigo, DATE())   AS SLD_ARG, ;
+		IMgiroTendenciaLJ(9,GRUPO.CODIGO,DATE()-100,DATE()) AS GRO_IDP, ;
+		IMGetSaldo(9,GRUPO.Codigo, DATE())   AS SLD_IDP ;
+    FROM Q:\SCGC\COMUM\GRUPO ;
+   	WHERE GRUPO.CODIGO = "13010719" ;
+   	INTO CURSOR GRO_GYN
+
+
+

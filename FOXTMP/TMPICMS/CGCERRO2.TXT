@@ -1,0 +1,18 @@
+
+*-----------------------------------------------------------------------*
+*  Clientes com inconsistencia no CGC e atendidos apos 01.12.1999
+*-----------------------------------------------------------------------*
+        CLIENTE RIGHT(FONE,8) LEFT(NOME,32)                    LEFT(CIDADE,10)
+*-----------------------------------------------------------------------*
+  2068962000135 86-5164       LUXO TURISMO AG.DE VIAGEM DE TUR BRASILIA       
+     3987797853 53-2232       ELSON MANN                       BRASILIA       
+     2150993680 -861-3 1      70BARRATTUR TRANSPORTES E TURISM   BARRA DO     
+     2378781620 -282-69       37BRITENGE BRITAGEM E CONSTRUCOE   APARECID     
+     2266309880 -287-187      66COMERCIAL STA PAUL  MAT. P/ CO   GOI NIA      
+  2605105830059 -249-987      49RAPIDO 900 TRANSP.RODOV.LTDA     APARECID     
+     2424361390 -241-183      22CONST.TRANSMILHA TERRAP.PAV.TR   GOI NIA      
+    29081610156 44-6534       RONALDO JOSE DE MELO             GOIANIA        
+  3710014000368 49-5939       ATS TECNOL. E SERV. LTDA         BRASILIA       
+     4635821491 62-9147       ALCINDO FERREIRA DE LIMA         JANDAIA        
+    12512773104 45-2080       HELIO BORGES                     SAO DOMING     
+    14107992191 01-4354       ANTONIO FERREIRA DOS SANTOS      BARRA DO G     

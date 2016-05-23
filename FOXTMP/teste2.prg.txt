@@ -1,0 +1,10 @@
+ select 1 as ctr, orc.empresa,emp.sigla, orc.orcamento,orc.data,orc.valor, count(*) as qtde ;
+      from q:\scgc\central\EMPRESA EMP, l:\TMP\SERGIO\orca_pgt pg, l:\TMP\SERGIO\orcament orc ;
+         where    emp.empresa   = orc.empresa;
+              and orc.empresa   = pg.empresa ;
+              and orc.orcamento = pg.orcamento ;
+              and pg.banco >= 850 ;
+              and pg.banco <=857 ;
+              having qtde > 1 ;
+              group by orc.empresa,orc.orcamento,orc.data ;
+              ORDER BY orc.empresa,orc.orcamento,orc.data

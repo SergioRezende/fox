@@ -1,0 +1,15 @@
+
+    SELECT  EMPRESA,;
+			CODIGO,;
+			CLASSIFICA,;
+			OPERACAO,;
+			MOVESTQ,;
+			DATA,;
+			DESCRICAO,;
+			QTDE,;
+			SUM(ENTRADA) AS ENTRADA,;
+			SUM(SAIDA)   AS SAIDA; 
+    FROM TMP_UNION ;
+	    ORDE BY classifica ;
+		GROUP BY classifica ;
+	    INTO CURSOR TMP_GERAL

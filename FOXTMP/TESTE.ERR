@@ -1,0 +1,2 @@
+select   br.bair_nome as bairro, mn.muni.nome as municipio  from    bairros br , municpio mn  
+Error in line 8: Unrecognized phrase/keyword in command.

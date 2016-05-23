@@ -1,0 +1,28 @@
+	SELECT pd.empresa as filial, ;
+	   lj.sigla,;
+	   pd.data,;
+	   pd.codigo,;
+	   tb.cdgprdforn,;
+	   grp.ordem,;
+	   grp.descricao,;
+	   pd.situacao,;
+	   pd.pedido,;
+	   pd.qtde     AS QtdPedida,;
+	   pd.qtdeatd  AS QtAtendida,;
+	   pd.qtdetr   AS QtTransito,;
+	   (pd.qtde - pd.qtdeatd - pd.qtdetr) AS QtdPendente  ;
+	FROM ;
+      &ALS_Empresa lj ,;
+      &ALS_Grupo grp, ;
+      &ALS_TabForn tb ,;
+      &ALS_Pedite pd;
+	WHERE ;
+		  lj.empresa = pd.empresa ;
+	  AND pd.pedido  = 206;
+	  and pd.codigo = "13010948" ;
+	  AND grp.codigo = pd.codigo ;
+	  AND LEFT(grp.classifica,2) $ "00";
+	  AND tb.codforn = pd.codforn ;
+	  AND tb.codigo  = pd.codigo ;
+	  AND (pd.qtde - pd.qtdeatd - pd.qtdetr) > 0 ;
+	  AND LEFT(pd.SITUACAO,1) = "B" 

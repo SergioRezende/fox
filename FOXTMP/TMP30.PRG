@@ -1,0 +1,52 @@
+SET EXCL OFF
+USE Q:\SCGC\LOJA\NOTA
+SET ORDER TO TAG DATA OF Q:\SCGC\LOJA\NOTA.CDX
+SET DATE GERMAN
+SET CENTU ON
+SET NEAR ON
+SEEK STR(1,3)+DTOS({16.01.2002})
+DO WHILE empresa = 1 
+   SCATTER MEMVAR
+   FLG = .F.
+   IF M.SERV_1 = 1721
+      M.SERV_1 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_2 = 1721
+      M.SERV_2 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_3 = 1721
+      M.SERV_3 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_4 = 1721
+      M.SERV_4 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_5 = 1721
+      M.SERV_5 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_6 = 1721
+      M.SERV_6 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_7 = 1721
+      M.SERV_7 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_8 = 1721
+      M.SERV_8 = 0
+	  FLG = .T.
+   ENDIF
+   IF M.SERV_9 = 1721
+      M.SERV_9 = 0
+	  FLG = .T.
+   ENDIF
+   IF FLG
+      GATHER MEMVAR
+   ENDIF
+
+   SKIP
+ENDDO

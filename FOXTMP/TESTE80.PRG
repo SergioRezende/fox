@@ -1,0 +1,19 @@
+SELECT O.EMPRESA,;
+       O.DATA,;
+       O.HORA,;
+       O.DT_FAT,;
+       O.HORA_FAT,;
+       O.VALOR,;
+       O.ORCAMENTO, ;
+       C.NOME;
+  FROM Q:\SCGC\CENTRAL\CLIENC C, ;
+       Q:\SCGC\COMUM\TIPOOPER T, ;
+       Q:\SCGC\CENTRAL\ORCAMENT O;
+  WHERE ;
+         O.EMPRESA= 3;
+      AND T.TIPO = O.TIPO;
+      AND T.CH_OPERA = "1";
+      AND C.EMPRESA = O.EMPRESA;
+      AND C.ORCAMENTO = O.ORCAMENTO;
+      AND DOW(DATA) = 7 AND HORA > "11:30:00";
+  ORDER BY DATA,HORA,DT_FAT,HORA_FAT

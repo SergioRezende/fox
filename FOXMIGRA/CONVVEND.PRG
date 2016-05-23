@@ -1,0 +1,24 @@
+SET EXCLUSIVE ON
+SELE 0
+USE USUARIO
+
+*----------------- ITENS
+SELE 0
+USE VENDIMPO
+ZAP 
+PACK
+APPEND FROM ARQVEN01.TXT TYPE SDF
+GO TOP
+******>> PREENCHIMENTO DOS CAMPOS
+*>>>>>>>>>>>>>>  CONVERCAO DOS GRUPOS
+SELE vendIMPO
+DO WHILE !EOF()
+	m.usuario  	 =	INT(VAL(RIGHT(vendimpo.filial,1)+vendimpo.codigo))
+	m.nome			= vendimpo.nome
+	SELE USUARIO
+	APPEND BLANK
+	GATHER MEMVAR MEMO
+	SELE vendimpo
+	SKIP
+ENDDO
+*>>>>>>>>>>>>>>  CONVERCAO DOS SUB-GRUPOS

@@ -1,0 +1,44 @@
+*-------------------------------------------------------------------*
+******       ZERAR SALDO EM ITEMMOV PARA SERVICOS               *****
+*-------------------------------------------------------------------*
+
+SET STEP ON
+SET TALK ON
+SET ESCAPE ON
+ON ERROR
+ON KEY
+
+CLOSE ALL
+
+SELE 0
+USE Q:\SCGC\COMUM\GRUPO
+SET ORDER TO TAG CODIGO
+
+SELE 0
+USE Q:\SCGC\TESTE\ITEMMOV
+SET ORDER TO TAG MOVIMENTO
+GO TOP
+DO   WHILE !EOF()
+	SELE GRUPO
+	SEEK ITEMMOV.CODIGO
+	IF !FOUND()
+		SELE ITEMMOV
+	    SKIP
+	    LOOP
+	ENDIF
+
+	IF      GRUPO.TP_CONTROL <> 2 ;
+	    AND GRUPO.TP_CONTROL <> 7 ;
+	    AND GRUPO.TP_CONTROL <> 9
+		SELE ITEMMOV
+	    SKIP
+	    LOOP
+	ENDIF
+
+	SELE ITEMMOV
+	=RLOCK()
+	REPLACE SLD_ESTQ WITH 0
+	REPLACE VLR_ESTQ WITH 0
+	REPLACE SLD_RESE WITH 0
+	SKIP
+ENDDO
