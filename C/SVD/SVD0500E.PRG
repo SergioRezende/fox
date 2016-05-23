@@ -1,0 +1,10 @@
+
+*-----------------------------------------------------*
+*  Fturista Simples
+*-----------------------------------------------------*
+WPprgativo = "SVD0500E"
+DO SVD2.PRG WITH "CAIXA OUTRAS"
+
+*DO SVD2.PRG WITH "FAT. SEM RESERVA"
+
+RETURN

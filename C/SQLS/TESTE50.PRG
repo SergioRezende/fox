@@ -1,0 +1,19 @@
+	SELECT ;
+		   NF.EMPRESA,;
+		   LEFT(EMP.SIGLA+SPACE(25),25) AS SIGLA,;	   
+		   0 AS PORTADOR,;
+		   BCO.NOME,;
+	   	   COUNT(*) AS QTD_TIT, ;
+	   	   0000000000.00      AS APRAZO, ;
+	   	   SUM(NF.TOTAL_NOTA) AS AVISTA ;
+	FROM  ;
+		   EMPRESA EMP,;
+		   BANCO BCO,;
+	   	   NOTA NF;
+	WHERE  ;
+			  DATA >=   LDt_Ini ;
+		  AND DATA <=   LDt_Fim ;
+		  AND EMP.EMPRESA = NF.EMPRESA ;
+		  AND BCO.BANCO   = 0 ;
+	GROUP BY  EMPRESA, PORTADOR ;
+	INTO CURSOR S_PORTADOR
