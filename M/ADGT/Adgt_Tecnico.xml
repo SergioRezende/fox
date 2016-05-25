@@ -1,0 +1,26 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                             
+  <DATAPACKET Version="2.0">                                                                                                                          
+  <METADATA>                                                                                                                                          
+  <FIELDS>                                                                                                                                            
+  <FIELD attrname="UnEm_Cnpj"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="Nome"            	        fieldtype="string" WIDTH="60" />                                                                           
+  <FIELD attrname="Cnpj"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="Cpf"         		fieldtype="string" WIDTH="11" />                                                                        
+  <FIELD attrname="Fone"             	        fieldtype="string" WIDTH="13" />                                                                       
+  <FIELD attrname="Fax" 		    	fieldtype="string" WIDTH="13" />                                                                            
+  <FIELD attrname="Email"      			fieldtype="string" WIDTH="60" />                                                                             
+  </FIELDS>                                                                                                                                           
+  </METADATA>                                                                                                                                         
+  <ROWDATA>                                                                                                                                           
+                                                                                                                                                      
+<ROW  UnEm_Cnpj="01536085000190"
+ Nome="SERGIO DE REZENDE ALVES"                                                                                                                       
+ Cnpj=""                                                                                                                  
+ Cpf="47989050110"                                                                                                                  
+ Fone="(62)32405422"                                                                                                               
+ Fax="(62)32405403"                                                                                                        
+ Email="sr_alves@pneulandia.com.br"                                                                                                                                 
+/>                                                                                                                                                   
+  </ROWDATA>                                                                                                                                          
+  </DATAPACKET>                                                                                                                                       
+

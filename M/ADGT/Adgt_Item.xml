@@ -1,0 +1,13 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                             
+  <DATAPACKET Version="2.0">                                                                                                                          
+  <METADATA>                                                                                                                                          
+  <FIELDS>                                                                                                                                            
+  <FIELD attrname="UnEm_Cnpj"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="COD_ITEM"           	        fieldtype="string" WIDTH="20" />                                                                           
+  <FIELD attrname="DESCRITEM"         		fieldtype="string" WIDTH="70" />                                                                        
+  <FIELD attrname="COD_GEN"         		fieldtype="string" WIDTH="2" />                                                                        
+  <FIELD attrname="COD_LST"            	        fieldtype="string" WIDTH="4" />                                                                       
+  <FIELD attrname="COD_NCM" 		    	fieldtype="string" WIDTH="8" />                                                                            
+  </FIELDS>                                                                                                                                           
+  </METADATA>                                                                                                                                         
+  <ROWDATA>                                                                                                                                           

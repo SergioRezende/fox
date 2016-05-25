@@ -1,0 +1,17 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                             
+  <DATAPACKET Version="2.0">                                                                                                                          
+  <METADATA>                                                                                                                                          
+  <FIELDS>                                                                                                                                            
+  <FIELD attrname="UnEm_Cnpj"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="IND_PROP"           	        fieldtype="string" WIDTH="1" />                                                                           
+  <FIELD attrname="CPF"                         fieldtype="string" WIDTH="11" />                                                                                                                                                                                            
+  <FIELD attrname="CNPJ"                        fieldtype="string" WIDTH="14" />                                                                                                                                                                                           
+  <FIELD attrname="IND_INV"           	        fieldtype="string" WIDTH="1" />                                                                           
+  <FIELD attrname="COD_NCM" 		    	fieldtype="string" WIDTH="8" />                                                                            
+  <FIELD attrname="COD_ITEM"           	        fieldtype="string" WIDTH="20" />                                                                           
+  <FIELD attrname="VL_UNIT"         		fieldtype="string" WIDTH="12" />                                                                        
+  <FIELD attrname="QTD"         		fieldtype="string" WIDTH="12" />                                                                        
+  <FIELD attrname="VL_ITEM"         		fieldtype="string" WIDTH="12" />                                                                        
+  </FIELDS>                                                                                                                                           
+  </METADATA>                                                                                                                                         
+  <ROWDATA>                                                                                                                                           

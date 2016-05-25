@@ -1,0 +1,45 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                             
+  <DATAPACKET Version="2.0">                                                                                                                          
+  <METADATA>                                                                                                                                          
+  <FIELDS>                                                                                                                                            
+  <FIELD attrname="UNEM_CNPJ"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="NOME"            	        fieldtype="string" WIDTH="60" />                                                                           
+  <FIELD attrname="CNPJ"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="CPF"         		fieldtype="string" WIDTH="11" />                                                                        
+  <FIELD attrname="CRC"         		fieldtype="string" WIDTH="11" />                                                                        
+  <FIELD attrname="UF"          		fieldtype="string" WIDTH="2" />                                                                        
+  <FIELD attrname="CEP"          		fieldtype="string" WIDTH="8" />                                                                        
+  <FIELD attrname="END"          		fieldtype="string" WIDTH="70" />                                                                        
+  <FIELD attrname="NUM"          		fieldtype="string" WIDTH="7" />                                                                        
+  <FIELD attrname="COMPL"          		fieldtype="string" WIDTH="30" />                                                                        
+  <FIELD attrname="BAIRRO"          		fieldtype="string" WIDTH="30" />                                                                        
+  <FIELD attrname="CEP_CP"          		fieldtype="string" WIDTH="8" />                                                                        
+  <FIELD attrname="CP"          		fieldtype="string" WIDTH="8" />                                                                        
+  <FIELD attrname="FONE"             	        fieldtype="string" WIDTH="13" />                                                                       
+  <FIELD attrname="FAX" 		    	fieldtype="string" WIDTH="13" />                                                                            
+  <FIELD attrname="EMAIL"      			fieldtype="string" WIDTH="60" />                                                                             
+  </FIELDS>                                                                                                                                           
+  <PARAMS DEFAULT_ORDER="1" PRIMARY_KEY="1" LCID="2057" />                                                                                            
+  </METADATA>                                                                                                                                         
+  <ROWDATA>                                                                                                                                           
+                                                                                                                                                      
+<ROW  UNEM_CNPJ="01536085000190" 
+ NOME="JOAO NUNES CASTILHO"                                                                                                                       
+ CNPJ=""                                                                                                                  
+ CPF="16656520120"                                                                                                                  
+ CRC= "7016"                                                                                                                  
+ UF= "GO" 
+ CEP="740000000" 
+ END="AV ANHANGUERA" 
+ NUM= "7206" 
+ COMPL="" 
+ BAIRRO="SETOR DOS FUNCIONARIOS" 
+ CEP_CP="" 
+ CP="" 
+ Fone="(62)32405422"                                                                                                               
+ Fax="(62)32405403"                                                                                                        
+ EMAIL="74560180@tanto.com.br"                                                                                                                                 
+/>                                                                                                                                                   
+  </ROWDATA>                                                                                                                                          
+  </DATAPACKET>                                                                                                                                       
+

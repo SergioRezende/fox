@@ -1,0 +1,172 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                                                                                                                                     
+  <DATAPACKET Version="2.0">                                                                                                                                                                                                                                  
+  <METADATA>                                                                                                                                                                                                                                                  
+  <FIELDS>                                                                                                                                                                                                                                                    
+  <FIELD attrname="UNEM_CNPJ"     fieldtype="string" WIDTH="14" />                                                                                                                                                                                      
+  <FIELD attrname="COD_PART"      fieldtype="string" WIDTH="6" />                                                                                                                                                                               
+  <FIELD attrname="NOME"          fieldtype="string" WIDTH="80" />                                                                                                                                                                                 
+  <FIELD attrname="COD_PAIS"      fieldtype="string" WIDTH="5" />                                                                                                                                                                               
+  <FIELD attrname="CNPJ"          fieldtype="string" WIDTH="14" />                                                                                                                                                                                           
+  <FIELD attrname="CPF"           fieldtype="string" WIDTH="11" />                                                                                                                                                                                            
+  <FIELD attrname="CEI"           fieldtype="string" WIDTH="12" />                                                                                                                                                                                            
+  <FIELD attrname="NIT"           fieldtype="string" WIDTH="11" />                                                                                                                                                                                            
+  <FIELD attrname="UF"            fieldtype="string" WIDTH="2" />                                                                                                                                                                                             
+  <FIELD attrname="IE"            fieldtype="string" WIDTH="14" />                                                                                                                                                                                            
+  <FIELD attrname="IE_ST"         fieldtype="string" WIDTH="14" />                                                                                                                                                                                         
+  <FIELD attrname="COD_MUN"       fieldtype="string" WIDTH="7" />                                                                                                                                                                                        
+  <FIELD attrname="IM"            fieldtype="string" WIDTH="14" />                                                                                                                                                                                            
+  <FIELD attrname="SUFRAMA"       fieldtype="string" WIDTH="9" />                                                                                                                                                                                        
+  <FIELD attrname="CEP"           fieldtype="string" WIDTH="8" />                                                                                                                                                                                            
+  <FIELD attrname="END"           fieldtype="string" WIDTH="70" />                                                                                                                                                                                           
+  <FIELD attrname="NUM"           fieldtype="string" WIDTH="7" />                                                                                                                                                                                            
+  <FIELD attrname="COMPL"         fieldtype="string" WIDTH="30" />                                                                                                                                                                                         
+  <FIELD attrname="BAIRRO"        fieldtype="string" WIDTH="30" />                                                                                                                                                                                        
+  <FIELD attrname="CEP_CP"        fieldtype="string" WIDTH="8" />                                                                                                                                                                                         
+  <FIELD attrname="CP"            fieldtype="string" WIDTH="8" />                                                                                                                                                                                             
+  <FIELD attrname="FONE"          fieldtype="string" WIDTH="13" />                                                                                                                                                                                
+  <FIELD attrname="FAX"		  fieldtype="string" WIDTH="13" />                                                                                                                                                                                               
+  <FIELD attrname="EMAIL"         fieldtype="string" WIDTH="80" />                                                                                                                                                                                             
+  <FIELD attrname="TIPO"          fieldtype="string" WIDTH="1" />                                                                                                                                                                                               
+  <FIELD attrname="INSC_AC"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_AL"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                                         
+  <FIELD attrname="INSC_AM"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_AP"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_BA"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_CE"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_DF"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="Insc_ES"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_GO"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_MA"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_MG"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_MS"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_MT"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_PA"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_PB"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_PE"       fieldtype="string" WIDTH="14" />                                                                                                                                                                                                                 
+  <FIELD attrname="INSC_PI"       fieldtype="string" WIDTH="14" />
+  <FIELD attrname="INSC_PR"       fieldtype="string" WIDTH="14" />
+  <FIELD attrname="INSC_RJ"       fieldtype="string" WIDTH="14" />
+  <FIELD attrname="INSC_RN"       fieldtype="string" WIDTH="14" />
+  <FIELD attrname="INSC_RO"       fieldtype="string" WIDTH="14" />
+  <FIELD attrname="INSC_RR"       fieldtype="string" WIDTH="14" />  
+  <FIELD attrname="INSC_RS"       fieldtype="string" WIDTH="14" />    
+  <FIELD attrname="INSC_SC"       fieldtype="string" WIDTH="14" />    
+  <FIELD attrname="INSC_SE"       fieldtype="string" WIDTH="14" />    
+  <FIELD attrname="INSC_SP"       fieldtype="string" WIDTH="14" />    
+  <FIELD attrname="INSC_TO"       fieldtype="string" WIDTH="14" />
+  </FIELDS>                                                                                                                                                                                                                                                   
+  </METADATA>                                                                                                                                                                                                                                                 
+  <ROWDATA>                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                              
+<ROW UNEM_CNPJ="01536085000270"                                                                                                                                                                                                                               
+COD_PART="0"                                                                                                                                                                                                                                             
+NOME="PNEULANDIA COMERCIAL LTDA"                                                                                                                                                                       
+COD_PAIS="00001"                                                                                                                                                                                                                                              
+CNPJ="01536085000270"                                                                                                                                                                                                                                         
+CPF="00000000000"                                                                                                                                                                                                                                             
+CEI="           0"                                                                                                                                                                                                                                            
+NIT="          0"                                                                                                                                                                                                                                             
+UF="DF"                                                                                                                                                                                                                                                       
+IE="0734060200226"                                                                                                                                                                                                                                           
+IE_ST="              "                                                                                                                                                                                                                                        
+COD_MUN="      0"                                                                                                                                                                                                                                             
+IM="75485 "                                                                                                                                                                                                                                           
+SUFRAMA="        0"                                                                                                                                                                                                                                           
+CEP="71200010"                                                                                                                                                                                                                                                
+END="SIA TRECHO 1"                                                                                                                                                                                  
+NUM="       "                                                                                                                                                                                                                                                 
+COMPL="LOTES 810/20"                                                                                                                                                                                                                        
+BAIRRO="ZONA INDUSTRIAL"                                                                                                                                                                                                                       
+CEP_CP="       0"                                                                                                                                                                                                                                             
+CP="       0"                                                                                                                                                                                                                                                 
+FONE="06133627189"                                                                                                                                                                                                                                          
+FAX="             "                                                                                                                                                                                                                                           
+EMAIL="                                                                                "                                                                                                                                                                      
+TIPO="C"
+INSC_AC="0"
+INSC_AL="0"
+INSC_AM="0"
+INSC_AP="0"
+INSC_BA="40607797 CS"
+INSC_CE="0"
+INSC_DF="0734060200226"
+Insc_ES="0"
+INSC_GO="0"
+INSC_MA="0"
+INSC_MG="0019039440140"
+INSC_MS="0"
+INSC_MT="0"
+INSC_PA="151807680"
+INSC_PB="0"
+INSC_PE="0"
+INSC_PI="0"
+INSC_PR="0"
+INSC_RJ="0"
+INSC_RN="0"
+INSC_RO="0"
+INSC_RR="0"
+INSC_RS="0"
+INSC_SC="0"
+INSC_SE="0"
+INSC_SP="807000077118"
+INSC_TO="299996018"                                                                                                                                                                                                                                                      
+/>                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                              
+<ROW UNEM_CNPJ="01536085000351"                                                                                                                                                                                                                               
+COD_PART="0"                                                                                                                                                                                                                                             
+NOME="PNEULANDIA COMERCIAL LTDA"                                                                                                                                                                       
+COD_PAIS="00001"                                                                                                                                                                                                                                              
+CNPJ="1536085000351"                                                                                                                                                                                                                                         
+CPF="00000000000"                                                                                                                                                                                                                                             
+CEI="           0"                                                                                                                                                                                                                                            
+NIT="          0"                                                                                                                                                                                                                                             
+UF="DF"                                                                                                                                                                                                                                                       
+IE="0734060200307 "                                                                                                                                                                                                                                           
+IE_ST="              "                                                                                                                                                                                                                                        
+COD_MUN="      0"                                                                                                                                                                                                                                             
+IM="75477"                                                                                                                                                                                                                                           
+SUFRAMA="        0"                                                                                                                                                                                                                                           
+CEP="70381530"                                                                                                                                                                                                                                                
+END="CRS 515"                                                                                                                                                                                  
+NUM="       "                                                                                                                                                                                                                                                 
+COMPL="BLOCO C NRS. 5/9 "                                                                                                                                                                                                                        
+BAIRRO="ASA SUL"                                                                                                                                                                                                                       
+CEP_CP="       0"                                                                                                                                                                                                                                             
+CP="       0"                                                                                                                                                                                                                                                 
+FONE="06132453788"                                                                                                                                                                                                                                          
+FAX="             "                                                                                                                                                                                                                                           
+EMAIL="                                                                                "                                                                                                                                                                      
+TIPO="C"
+INSC_AC="0"
+INSC_AL="0"
+INSC_AM="0"
+INSC_AP="0"
+INSC_BA="0"
+INSC_CE="0"
+INSC_DF="0734060200307"
+Insc_ES="0"
+INSC_GO="0"
+INSC_MA="0"
+INSC_MG="0019039440220 "
+INSC_MS="0"
+INSC_MT="0"
+INSC_PA="151807698"
+INSC_PB="0"
+INSC_PE="0"
+INSC_PI="0"
+INSC_PR="0"
+INSC_RJ="0"
+INSC_RN="0"
+INSC_RO="0"
+INSC_RR="0"
+INSC_RS="0"
+INSC_SC="0"
+INSC_SE="0"
+INSC_SP="807000086119"
+INSC_TO="299995917"                                                                                                                                                                                                                                                      
+/>                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                              
+ </ROWDATA>                                                                                                                                                                                                                                                   
+ </DATAPACKET>                                                                                                                                                                                                                                                
+

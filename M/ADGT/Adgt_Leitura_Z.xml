@@ -1,0 +1,38 @@
+  <?xml version="1.0" standalone="yes" ?>                                                                                                             
+  <DATAPACKET Version="2.0">                                                                                                                          
+  <METADATA>                                                                                                                                          
+  <FIELDS>                                                                                                                                            
+  <FIELD attrname="UNEM_CNPJ"         		fieldtype="string" WIDTH="14" />                                                                        
+  <FIELD attrname="COD_MOD"           	        fieldtype="string" WIDTH="2" />                                                                           
+  <FIELD attrname="DT_DOC"         		fieldtype="string" WIDTH="8" />                                                                        
+  <FIELD attrname="ECF_CX"         		fieldtype="string" WIDTH="4" />                                                                        
+  <FIELD attrname="ECF_FAB"            	        fieldtype="string" WIDTH="15" />                                                                       
+  <FIELD attrname="ALIQUOTA" 		    	fieldtype="string" WIDTH="5" />                                                                            
+  <FIELD attrname="CRO" 		    	fieldtype="string" WIDTH="6" />                                                                            
+  <FIELD attrname="CRZ" 		    	fieldtype="string" WIDTH="6" />                                                                            
+  <FIELD attrname="NUM_DOC_INI" 	    	fieldtype="string" WIDTH="6" />                                                                            
+  <FIELD attrname="NUM_DOC_FIN" 	    	fieldtype="string" WIDTH="6" />                                                                            
+  <FIELD attrname="GT_INI"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="GT_FIN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_BRT"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLCANISSQN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLCANICMS"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLCAN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLDSCISSQN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLDSCICMS"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLDSC"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLACMISSQN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLACMICMS"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VLACM"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_SSQN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_LIQ"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_BC_ICMS"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_ICMS"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_ISEN"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_NT"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="VL_ST"	 	    	fieldtype="string" WIDTH="12" />                                                                            
+  <FIELD attrname="COD_INF_OBS" 	    	fieldtype="string" WIDTH="1" />                                                                            
+
+  </FIELDS>                                                                                                                                           
+  </METADATA>                                                                                                                                         
+  <ROWDATA>                                                                                                                                           

@@ -1,0 +1,36 @@
+--@ ERRO 1.  O valor total dos debitos por Saidas e prestacoes com debito do imposto 
+     nao confere com os valores de ICMS parciais do lancamento por CFOP. 
+     Seguindo a regra: grupo iniciado com 5, 6 e 7 cuja chave e CFOP dos valores de endereco :
+     (E025,6), (E055,6), (E085,13), (E105,6), (E120,17), (E140,13).
+      Registro: E360 - Apuracao do ICMS. Campo: 2 - 01- Valor total dos debitos
+     por "Saidas e prestacoes com debito do imposto". Linha: 1656.
+
+--@ ERRO 2.  A soma dos valores de ajuste de outros creditos nao confere com o valor total de outros creditos. 
+      Seguindo a regra: grupo iniciado com 4 cuja chave e valor do ajuste da apuracao do registro E340.
+         Registro: E360 - Apuracao do ICMS. Campo: 7 - 06- Valor total de "Outros creditos". Linha: 1656.
+
+--@ ERRO 3.  Neste campo devem ser somados os valores (05+06+07).  Registro: E360 - 
+         Apuracao do ICMS. Campo: 9 - 08- Valor subtotal dos "Creditos (05+06+07)". Linha: 1656.
+
+--@ ERRO 4.  Neste campo devem ser somados os valores (08+09).
+     Registro: E360 - Apuracao do ICMS. Campo: 11 - 10- Valor total dos "Creditos (08+09)". Linha: 1656.
+
+--@ ERRO 5.  Campo obrigatorio de acordo com o layout Livro Eletronico Registro: H025 - Inventario. Campo: 9 - Unidade do item. Linha: 2251.
+
+--@ ERRO 6.  Campo obrigatorio de acordo com o layout Livro Eletronico Registro: H025 - Inventario. Campo: 9 - Unidade do item. Linha: 2668.
+
+--@ ERRO 7.  O registro foi rejeitado, pois não existe ou não se encontra na ordem estabelecido 
+      no layout Livro Eletronico Registro Anterior: H990 - 0 . Registro Atual: I001 - 0. Linha: 2886
+
+--@ ERRO 8.  O registro foi rejeitado, pois não existe ou não se encontra na ordem estabelecido
+       no layout Livro Eletronico Registro Anterior: I001 - 0 . Registro Atual: I001 - 0. Linha: 2887
+
+--@ ERRO 9.  O registro foi rejeitado, pois não existe ou não se encontra na ordem estabelecido 
+   no layout Livro Eletronico Registro: I001 - 0 com o registro de encerramento. Linha: 2897
+
+--@ ERRO 10.  Existem valores que não devem ser incluidos no arquivo, pois não foram utilizados.
+    Essa validação está de  acordo com o layout Livro Eletronico As informações não utilizadas 
+     pertencem ao Registro: 0200 - Tabela de Identificacao do Item. Campo:2 - Codigo do item.
+
+--> Arquivo Arquivo_Digital.txt validado sem sucesso. Quantidade de 10 erros encontrados.
+> Fim do processo de validação. 
